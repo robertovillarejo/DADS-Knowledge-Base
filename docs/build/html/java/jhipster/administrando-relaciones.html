@@ -1,0 +1,561 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Administrando relaciones &mdash; documentación de Base de conocimientos - 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../../genindex.html"/>
+        <link rel="search" title="Búsqueda" href="../../search.html"/>
+    <link rel="top" title="documentación de Base de conocimientos - 0.1" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Base de conocimientos
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../description.html">Descripción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started.html">Primeros pasos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Uso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../FAQs.html">Preguntas y Respuestas Frecuentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Licencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../known-issues.html">Issues conocidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contribuciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about-developer.html">Sobre el Desarrollador</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Java</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Java</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Arquitectura</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../arquitectura/index.html">Arquitectura</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Angular</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../angular/index.html">Angular</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Base de conocimientos</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Administrando relaciones</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/java/jhipster/administrando-relaciones.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="administrando-relaciones">
+<span id="administrando-relaciones"></span><h1>Administrando relaciones<a class="headerlink" href="#administrando-relaciones" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Cuando se usa JPA, el sub-generador de entidades puede crear relaciones entre las entidades.</p>
+<div class="section" id="presentacion">
+<span id="presentacion"></span><h2>Presentación<a class="headerlink" href="#presentacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Las relaciones solo funcionan cuando se usa JPA. Si eliges usar Cassandra o MongoDB, éstas no estarán disponibles.</p>
+<p>Una relación funciona entre dos entidades y JHipster genera el código para:</p>
+<ul class="simple">
+<li>Administrar esta relación con JPA en las entidades generadas</li>
+<li>Crear el <em>changelog</em> correcto de Liquibase, a fin de que la relación exista en la base de datos</li>
+<li>Generar el <em>front-end</em> en AngularJS así puedes administrar esta relación de manera gráfica en la interfaz de usuario</li>
+</ul>
+</div>
+<div class="section" id="jhipster-uml-y-jdl-studio">
+<span id="jhipster-uml-y-jdl-studio"></span><h2>JHipster UML y JDL Studio<a class="headerlink" href="#jhipster-uml-y-jdl-studio" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Esta página escribe cómo crear relaciones con JHipster usando la interfaz de línea de comandos estándar. Si deseas crear muchas entidades y relaciones, quizá prefieras usar una herramienta gráfica.</p>
+<p>En ese caso, hay dos opciones disponibles:</p>
+<ul class="simple">
+<li>JHipster UML, el cual te permite usar un editor UML.</li>
+<li>JDL Studio, nuestro herramienta <em>online</em> para crear entidades y relaciones usando nuestro lenguaje específico de dominio.</li>
+</ul>
+<p>Puedes generar entidades con relaciones a partir de un archivo JDL usando el sub-generador <code class="docutils literal"><span class="pre">import-jdl</span></code>, ejecutando <code class="docutils literal"><span class="pre">jhipster</span> <span class="pre">import-jdl</span> <span class="pre">tu-archivo.jh</span></code></p>
+</div>
+<div class="section" id="relaciones-disponibles">
+<span id="relaciones-disponibles"></span><h2>Relaciones disponibles<a class="headerlink" href="#relaciones-disponibles" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Como usamos JPA, se encuentran disponibles las relaciones usuales como <em>uno-a-muchos</em>, <em>muchos-a-uno, muchos-a-muchos</em> y <em>uno-a-uno:</em></p>
+<ol class="simple">
+<li>Una relación bidireccional <em>uno-a-muchos</em></li>
+<li>Una relación unidireccional <em>muchos-a-uno</em></li>
+<li>Una relación unidireccional <em>uno-a-muchos</em></li>
+<li>Dos relaciones <em>uno-a-muchos</em> en las mismas dos entidades</li>
+<li>Una relación <em>muchos-a-muchos</em></li>
+<li>Una relación <em>uno-a-uno</em></li>
+<li>Una relación unidireccional <em>uno-a-uno</em></li>
+</ol>
+<p>Tip: la entidad <code class="docutils literal"><span class="pre">User</span></code></p>
+<p>Por favor nota que la entidad <code class="docutils literal"><span class="pre">User</span></code>, la cual maneja JHipster, es específica. Puedes hacer:</p>
+<ul class="simple">
+<li>relaciones <code class="docutils literal"><span class="pre">muchos-a-uno</span></code> a esta entidad (un <code class="docutils literal"><span class="pre">Car</span></code>puede tener una relación <em>muchos-a-uno</em> a un <code class="docutils literal"><span class="pre">User</span></code>_). _Esto generará un <em>query</em> específico en el repositorio de tu nueva entidad, así que puedes filtrar tu entidad por el usuario autenticado quien hace la consulta, lo cual es un requerimiento común. En la interfaz gráfica del cliente (generada en AngularJS) tendrás un <em>dropdown</em> en <code class="docutils literal"><span class="pre">Car</span></code>para seleccionar un <code class="docutils literal"><span class="pre">User</span></code>.</li>
+<li>relaciones <code class="docutils literal"><span class="pre">muchos-a-muchos</span></code> y <code class="docutils literal"><span class="pre">uno-a-uno</span></code>_ _a la entidad <code class="docutils literal"><span class="pre">User</span></code>, pero la otra entidad <strong>debe</strong> ser propietaria de la relación (un <code class="docutils literal"><span class="pre">Team</span></code>(equipo) puede tener una relación <code class="docutils literal"><span class="pre">muchos-a-muchos</span></code> a <code class="docutils literal"><span class="pre">User</span></code>pero solo el equipo puede añadir/eliminar usuarios y un usuario no puede añadir/eliminar un equipo). En la interfaz gráfica del cliente (generada en AngularJS) podrás seleccionar un <code class="docutils literal"><span class="pre">User</span></code>en un <em>multi-select box</em>.</li>
+</ul>
+</div>
+<div class="section" id="una-relacion-bidireccional-uno-a-muchos">
+<span id="una-relacion-bidireccional-uno-a-muchos"></span><h2>Una relación bidireccional <em>uno-a-muchos</em><a class="headerlink" href="#una-relacion-bidireccional-uno-a-muchos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Comencemos con dos entidades, un <code class="docutils literal"><span class="pre">Owner</span></code>(propietario) y un <code class="docutils literal"><span class="pre">Car</span></code>_. _Un propietario puede tener muchos carros y un carro puede tener solo un propietario.</p>
+<p>Así que por un lado,  ésta es una simple relación <code class="docutils literal"><span class="pre">uno-a-muchos</span></code> (un propietario tiene muchos carros), y por otro lado es  una relación <code class="docutils literal"><span class="pre">muchos-a-uno</span></code> (muchos carros tiene un propietario):</p>
+<p><code class="docutils literal"><span class="pre">Owner</span> <span class="pre">(1)</span> <span class="pre">&lt;-----&gt;</span> <span class="pre">(*)</span> <span class="pre">Car</span></code></p>
+<p>Primero crearemos a <code class="docutils literal"><span class="pre">Owner</span></code>. A continuación se muestran las preguntas relevantes de JHipter respecto a <code class="docutils literal"><span class="pre">Owner</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>jhipster entity Owner
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Car
+? What is the name of the relationship? car
+? What is the type of the relationship? one-to-many
+? What is the name of this relationship in the other entity? owner
+</pre></div>
+</div>
+<p>Por favor nota que seleccionamos las opciones por defecto respecto a los nombres de las relaciones.</p>
+<p>Ahora podemos generar el <code class="docutils literal"><span class="pre">Car</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>jhipster entity Car
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Owner
+? What is the name of the relationship? owner
+? What is the type of the relationship? many-to-one
+? When you display this relationship with AngularJS, which field from &#39;Owner&#39; do you want to use? id
+</pre></div>
+</div>
+<p>Se puede hacer lo mismo usando el JDL que se muestra a continuación:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">entity</span> <span class="n">Owner</span>
+<span class="n">entity</span> <span class="n">Car</span>
+
+<span class="n">relationship</span> <span class="n">OneToMany</span> <span class="p">{</span>
+  <span class="n">Owner</span><span class="p">{</span><span class="n">car</span><span class="p">}</span> <span class="n">to</span> <span class="n">Car</span><span class="p">{</span><span class="n">owner</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>!Eso es todo, ahora tienes una relación <code class="docutils literal"><span class="pre">uno-a-muchos</span></code> entre estas dos entidades! En la interfaz gráfica de AngularJS tendrás un dropdown en <code class="docutils literal"><span class="pre">Car</span></code>para seleccionar un <code class="docutils literal"><span class="pre">Owner</span></code>.</p>
+</div>
+<div class="section" id="una-relacion-unidireccional-muchos-a-uno">
+<span id="una-relacion-unidireccional-muchos-a-uno"></span><h2>Una relación unidireccional <em>muchos-a-uno</em><a class="headerlink" href="#una-relacion-unidireccional-muchos-a-uno" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En el ejemplo anterior tenemos una relación bidireccional: a partir de una instancia de <code class="docutils literal"><span class="pre">Car</span></code>podrías encontrar su propietario, y a partir de una instancia de <code class="docutils literal"><span class="pre">Owner</span></code>podrías obtener todos sus carros.</p>
+<p>Una relación unidireccional <code class="docutils literal"><span class="pre">muchos-a-uno</span></code> significa que los carros conocen a su propietario pero no al revés.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Owner</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;-----</span> <span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="n">Car</span>
+</pre></div>
+</div>
+<p>Harías estas relaciones por dos razones:</p>
+<ul class="simple">
+<li>Desde un punto de vista de negocio, solo usas tus entidades de esta manera. Por tanto no quieres tener una API que permita a los desarrolladores hacer algo que no tenga sentido.</li>
+<li>Tienes una pequeña ganancia de rendimiento cuando usas la entidad <code class="docutils literal"><span class="pre">Owner</span></code>(porque no tiene que manejar la colección de carros).</li>
+</ul>
+<p>En ese caso, aún crearías primero la entidad <code class="docutils literal"><span class="pre">Owner</span></code>, pero esta vez sin relación:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>jhipster entity Owner
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? No
+</pre></div>
+</div>
+<p>Y después la entidad <code class="docutils literal"><span class="pre">Car</span></code>, como en el ejemplo anterior:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>jhipster entity Car
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Owner
+? What is the name of the relationship? owner
+? What is the type of the relationship? many-to-one
+? When you display this relationship with AngularJS, which field from &#39;Owner&#39; do you want to use? id
+</pre></div>
+</div>
+<p>Esto funcionará como en el ejemplo anterior, pero no podrás añadir o eliminar carros desde la entidad <code class="docutils literal"><span class="pre">Owner</span></code>. Del lado de la interfaz en AngularJS tendrás un _dropdown _en Car para seleccionar a un <code class="docutils literal"><span class="pre">Owner</span></code>. Éste es el JDL correspondiente:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">entity</span> <span class="n">Owner</span>
+<span class="n">entity</span> <span class="n">Car</span>
+
+<span class="n">relationship</span> <span class="n">ManyToOne</span> <span class="p">{</span>
+  <span class="n">Car</span><span class="p">{</span><span class="n">owner</span><span class="p">}</span> <span class="n">to</span> <span class="n">Owner</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="una-relacion-unidireccional-uno-a-muchos">
+<span id="una-relacion-unidireccional-uno-a-muchos"></span><h2>Una relación unidireccional <em>uno-a-muchos</em><a class="headerlink" href="#una-relacion-unidireccional-uno-a-muchos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Una relación unidireccional <code class="docutils literal"><span class="pre">uno-a-muchos</span></code>_ _significa que la instancia <code class="docutils literal"><span class="pre">Owner</span></code>puede obtener su colección de carros, pero no al revés. Es lo contrario al ejemplo anterior.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Owner</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">-----&gt;</span> <span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="n">Car</span>
+</pre></div>
+</div>
+<p>Por lo pronto, este tipo de relación no es proporcionada por defecto en JHipster, mira <a class="reference external" href="https://github.com/jhipster/generator-jhipster/issues/1569">#1569 </a>para más información.</p>
+<p>Tienes dos soluciones para esto:</p>
+<ul class="simple">
+<li>Hacer un mapeo bidireccional y usarlo sin modificación: es nuestro enfoque recomendado, porque es más simple.</li>
+<li>Hacer un mapeo bidireccional y luego modificarlo para transformarlo en un mapeo unidireccional:<ul>
+<li>Elimina el atributo &quot;mappedBy&quot; en tu anotación<code class="docutils literal"><span class="pre">&#64;OneToMany</span></code></li>
+<li>Genera la tabla <em>join</em> necesario: puedes ejecutar <code class="docutils literal"><span class="pre">mvn</span> <span class="pre">liquibase:diff</span></code> para generar dicha tabla, mira la <a class="reference external" href="http://www.jhipster.tech/development/">documentación acerca del uso del Liquibase diff</a>.</li>
+</ul>
+</li>
+</ul>
+<p>Esto no tiene soporte en JDL ni en JHipster.</p>
+</div>
+<div class="section" id="dos-relaciones-uno-a-muchos-en-las-mismas-dos-entidades">
+<span id="dos-relaciones-uno-a-muchos-en-las-mismas-dos-entidades"></span><h2>Dos relaciones uno-a-muchos en las mismas dos entidades<a class="headerlink" href="#dos-relaciones-uno-a-muchos-en-las-mismas-dos-entidades" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para este ejemplo, una <code class="docutils literal"><span class="pre">Person</span></code>puede ser el dueño de varios carros y también puede ser el chofer de muchos carros:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Person</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;---</span><span class="n">owns</span><span class="o">-----&gt;</span> <span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="n">Car</span>
+<span class="n">Person</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;---</span><span class="n">drives</span><span class="o">---&gt;</span> <span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="n">Car</span>
+</pre></div>
+</div>
+<p>Para esto necesitamos usar los nombres de las relaciones, los cuales hemos dejado sus valores por defecto en los ejemplos anteriores.</p>
+<p>Genera la entidad <code class="docutils literal"><span class="pre">Person</span></code>, la cual tiene dos relaciones <code class="docutils literal"><span class="pre">uno-a-muchos</span></code> hacia la entidad <code class="docutils literal"><span class="pre">Car</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>jhipster entity Person
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Car
+? What is the name of the relationship? ownedCar
+? What is the type of the relationship? one-to-many
+? What is the name of this relationship in the other entity? owner
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Car
+? What is the name of the relationship? drivedCar
+? What is the type of the relationship? one-to-many
+? What is the name of this relationship in the other entity? driver
+</pre></div>
+</div>
+<p>Genera la entidad <code class="docutils literal"><span class="pre">Car</span></code>, la cual usa el mismo nombre de relación que se configuró en la entidad <code class="docutils literal"><span class="pre">Person</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>jhipster entity Car
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Person
+? What is the name of the relationship? owner
+? What is the type of the relationship? many-to-one
+? When you display this relationship with AngularJS, which field from &#39;Person&#39; do you want to use? id
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Person
+? What is the name of the relationship? driver
+? What is the type of the relationship? many-to-one
+? When you display this relationship with AngularJS, which field from &#39;Person&#39; do you want to use? id
+</pre></div>
+</div>
+<p>Se puede hacer lo mismo usando el JDL siguiente</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">entity</span> <span class="n">Person</span>
+<span class="n">entity</span> <span class="n">Car</span>
+
+<span class="n">relationship</span> <span class="n">OneToMany</span> <span class="p">{</span>
+  <span class="n">Person</span><span class="p">{</span><span class="n">ownedCar</span><span class="p">}</span> <span class="n">to</span> <span class="n">Car</span><span class="p">{</span><span class="n">owner</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">relationship</span> <span class="n">OneToMany</span> <span class="p">{</span>
+  <span class="n">Person</span><span class="p">{</span><span class="n">drivedCar</span><span class="p">}</span> <span class="n">to</span> <span class="n">Car</span><span class="p">{</span><span class="n">driver</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Un <code class="docutils literal"><span class="pre">Car</span></code>ahora puede tener un chofer y un propietario, los cuales ambos son entidades <code class="docutils literal"><span class="pre">Person</span></code>. Del lado de la interfaz gráfica de AngularJS tendrás <em>dropdowns</em> en <code class="docutils literal"><span class="pre">Car</span></code>para seleccionar una <code class="docutils literal"><span class="pre">Person</span></code>para el campo <code class="docutils literal"><span class="pre">owner</span></code>y el campo <code class="docutils literal"><span class="pre">driver</span></code>.</p>
+</div>
+<div class="section" id="una-relacion-muchos-a-muchos">
+<span id="una-relacion-muchos-a-muchos"></span><h2>Una relación <em>muchos-a-muchos</em><a class="headerlink" href="#una-relacion-muchos-a-muchos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Un <code class="docutils literal"><span class="pre">Driver</span></code>puede tener muchos carros, y un <code class="docutils literal"><span class="pre">Car</span></code>puede tener muchos choferes.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Driver</span> <span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">&lt;-----&gt;</span> <span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="n">Car</span>
+</pre></div>
+</div>
+<p>A nivel de base de datos, esto significa que tendremos una tabla join entre las tablas <code class="docutils literal"><span class="pre">Driver</span></code>y <code class="docutils literal"><span class="pre">Car</span></code>.</p>
+<p>Para JPA, una de estas dos entidades necesitarán administrar la relación: en nuestro caso, esa sería la entidad <code class="docutils literal"><span class="pre">Car</span></code>, la cual será responsable de añadir o eliminar choferes.</p>
+<p>Generemos el lado no-propietario de la relación, el <code class="docutils literal"><span class="pre">Driver</span></code>, con una relación <em>muchos-a-muchos:</em></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>jhipster entity Driver
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Car
+? What is the name of the relationship? car
+? What is the type of the relationship? many-to-many
+? Is this entity the owner of the relationship? No
+? What is the name of this relationship in the other entity? driver
+</pre></div>
+</div>
+<p>Después genera a <code class="docutils literal"><span class="pre">Car</span></code>, con el lado propietario de la relación <em>muchos-a-muchos</em>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>jhipster entity Car
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Driver
+? What is the name of the relationship? driver
+? What is the type of the relationship? many-to-many
+? Is this entity the owner of the relationship? Yes
+? When you display this relationship with AngularJS, which field from &#39;Driver&#39; do you want to use? id
+</pre></div>
+</div>
+<p>Se puede hacer lo mismo usando el siguiente JDL:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">entity</span> <span class="n">Driver</span>
+<span class="n">entity</span> <span class="n">Car</span>
+
+<span class="n">relationship</span> <span class="n">ManyToMany</span> <span class="p">{</span>
+  <span class="n">Car</span><span class="p">{</span><span class="n">driver</span><span class="p">}</span> <span class="n">to</span> <span class="n">Driver</span><span class="p">{</span><span class="n">car</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>!Eso es todo, ahora tienes una relación <em>muchos-a-muchos</em> entre estas dos entidades! En la interfaz gráfica en AngularJS tendrás un multi-select dropdown en <code class="docutils literal"><span class="pre">Car</span></code>para seleccionar múltiples <code class="docutils literal"><span class="pre">Driver</span></code>puesto que Car es el lado propietario.</p>
+</div>
+<div class="section" id="una-relacion-uno-a-uno">
+<span id="una-relacion-uno-a-uno"></span><h2>Una relación <em>uno-a-uno</em><a class="headerlink" href="#una-relacion-uno-a-uno" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Siguiendo nuestro ejemplo, una relación <em>uno-a-uno</em> significaría que un <code class="docutils literal"><span class="pre">Driver</span></code>puede manejar solo un <code class="docutils literal"><span class="pre">Car</span></code>y un <code class="docutils literal"><span class="pre">Car</span></code>puede tener solo un <code class="docutils literal"><span class="pre">Driver</span></code>.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Driver</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;-----&gt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">Car</span>
+</pre></div>
+</div>
+<p>Creemos el lado no-propietario de la relación, en nuestro caso el <code class="docutils literal"><span class="pre">Driver</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>jhipster entity Driver
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Car
+? What is the name of the relationship? car
+? What is the type of the relationship? one-to-one
+? Is this entity the owner of the relationship? No
+? What is the name of this relationship in the other entity? driver
+</pre></div>
+</div>
+<p>Después genera a <code class="docutils literal"><span class="pre">Car</span></code>, la cual es dueña de la relación:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>jhipster entity Car
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Driver
+? What is the name of the relationship? driver
+? What is the type of the relationship? one-to-one
+? Is this entity the owner of the relationship? Yes
+? What is the name of this relationship in the other entity? car
+? When you display this relationship with AngularJS, which field from &#39;Driver&#39; do you want to use? id
+</pre></div>
+</div>
+<p>Se puede hacer lo mismo con el siguiente JDL</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">entity</span> <span class="n">Driver</span>
+<span class="n">entity</span> <span class="n">Car</span>
+
+<span class="n">relationship</span> <span class="n">OneToOne</span> <span class="p">{</span>
+  <span class="n">Car</span><span class="p">{</span><span class="n">driver</span><span class="p">}</span> <span class="n">to</span> <span class="n">Driver</span><span class="p">{</span><span class="n">car</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>!Eso es todo, ahora tienes una relación <em>uno-a-uno</em> entre estas entidades! En la interfaz gráfica en AngularJS tendrás un dropdown en <code class="docutils literal"><span class="pre">Car</span></code>para seleccionar un <code class="docutils literal"><span class="pre">Driver</span></code>puesto que <code class="docutils literal"><span class="pre">Car</span></code>es el lado propietario.</p>
+</div>
+<div class="section" id="una-relacion-unidireccional-uno-a-uno">
+<span id="una-relacion-unidireccional-uno-a-uno"></span><h2>Una relación unidireccional <em>uno-a-uno</em><a class="headerlink" href="#una-relacion-unidireccional-uno-a-uno" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Una relación unidireccional <em>uno-a-uno</em> significa que la instancia <code class="docutils literal"><span class="pre">citizen</span> <span class="pre">(ciudadano)</span></code>puede obtener su pasaporte, pero la instancia de <code class="docutils literal"><span class="pre">passport</span> <span class="pre">(pasaporte)</span></code>no puede obtener a su propietario.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Citizen</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">-----&gt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">Passport</span>
+</pre></div>
+</div>
+<p>Primero genera la entidad <code class="docutils literal"><span class="pre">Passport</span></code>, sin ninguna relación con su propietario:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>jhipster entity Passport
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? No
+</pre></div>
+</div>
+<p>Después, genera la entidad <code class="docutils literal"><span class="pre">Citizen</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>jhipster entity Citizen
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Passport
+? What is the name of the relationship? passport
+? What is the type of the relationship? one-to-one
+? Is this entity the owner of the relationship? Yes
+? What is the name of this relationship in the other entity? citizen
+? When you display this relationship with AngularJS, which field from &#39;Passport&#39; do you want to use? id
+</pre></div>
+</div>
+<p>Después de hacer esto, un <code class="docutils literal"><span class="pre">Citizen</span></code>posee un pasaporte, pero no se define ninguna instancia de <code class="docutils literal"><span class="pre">citizen</span></code>en <code class="docutils literal"><span class="pre">Passport</span></code>. En la interfaz gráfica de AngularJS tendrás un _dropdown _en <code class="docutils literal"><span class="pre">Citizen</span></code>para seleccionar un <code class="docutils literal"><span class="pre">Passport</span></code>puesto que <code class="docutils literal"><span class="pre">Citizen</span></code>es el lado propietario. Éste es el JDL correspondiente:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">entity</span> <span class="n">Citizen</span>
+<span class="n">entity</span> <span class="n">Passport</span>
+
+<span class="n">relationship</span> <span class="n">OneToOne</span> <span class="p">{</span>
+  <span class="n">Citizen</span><span class="p">{</span><span class="n">passport</span><span class="p">}</span> <span class="n">to</span> <span class="n">Passport</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, DADS Infotec.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

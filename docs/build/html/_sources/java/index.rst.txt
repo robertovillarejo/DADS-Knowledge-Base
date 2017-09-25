@@ -6,11 +6,6 @@ En esta sección encontrarás documentación sobre el lenguaje Java.
 .. toctree::
   :maxdepth: 2
 
-  jhipster/jhipster
-
-.. toctree::
-  :maxdepth: 2
-
   spring/spring-data
   spring/spring-data-reference
 
@@ -28,3 +23,8 @@ En esta sección encontrarás documentación sobre el lenguaje Java.
   :maxdepth: 2
 
   arquitectura/componentes/plugins/mybatis/mybatis-gen-addon
+
+.. toctree::
+  :maxdepth: 2
+
+  jhipster/index
