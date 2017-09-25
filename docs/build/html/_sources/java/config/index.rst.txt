@@ -1,0 +1,8 @@
+Configuración
+-------------
+
+.. toctree::
+  :maxdepth: 3
+  :caption: Configuración
+
+  cer-config.md
