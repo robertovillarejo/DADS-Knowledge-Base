@@ -1,0 +1,14 @@
+.. toctree::
+  :maxdepth: 2
+  :caption: Centos7
+
+  centos7/index
+
+.. toctree::
+  :maxdepth: 1
+
+  principios/index
+  dockers/resources
+  admin/extend-vm
+  admin/monitoring
+  checklist/after-install

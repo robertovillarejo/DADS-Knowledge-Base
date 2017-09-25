@@ -1,0 +1,597 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Instalación de Tomcat &mdash; documentación de Base de conocimientos - 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../../genindex.html"/>
+        <link rel="search" title="Búsqueda" href="../../search.html"/>
+    <link rel="top" title="documentación de Base de conocimientos - 0.1" href="../../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../index.html"/>
+        <link rel="next" title="Instalación y configuración de VAGRANT en CENTOS 7" href="vagrant.html"/>
+        <link rel="prev" title="Instalación de PostgreSQL en CentOS 7" href="postgresql-install.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Base de conocimientos
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../description.html">Descripción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started.html">Primeros pasos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Uso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../FAQs.html">Preguntas y Respuestas Frecuentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Licencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../known-issues.html">Issues conocidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contribuciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about-developer.html">Sobre el Desarrollador</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Java</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../java/spring/spring-data.html">Spring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/spring/spring-data-reference.html">Spring Data Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/maven/maven-guidelines.html">Líneamiento - Maven</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/config/cer-config.html">Instalar certificado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/config/cer-config.html#update">Update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/arquitectura/componentes/plugins/mybatis/mybatis-gen-addon.html">Mybatis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/jhipster/index.html">JHipster</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Arquitectura</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../arquitectura/rol-arquitecto.html">El Rol de El Arquitecto de Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arquitectura/servicio-arquitectura.html">Servicios</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Angular</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../angular/angular-config.html">Configuración de Angular para Ubuntu 16.04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../angular/guideliness.html">Las mejores prácticas de desarrollo Angular JS las puedes consultar en:</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Linux</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../admin/extend-vm.html">Extender LVM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/monitoring.html">Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apache.html">Apache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coreos.html">¿Qué es CoreOS?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dockers.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mysql-conf.html">Instalación de MySQL en CentOS 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postgresql-install.html">Instalación de PostgreSQL en CentOS 7</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Instalación de Tomcat</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#actualizacion-de-paquetes">Actualización de paquetes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#instalacion-de-tomcat-8">Instalación de Tomcat 8</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#descargando-tomcat">Descargando Tomcat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descomprimiendo-tomcat">Descomprimiendo Tomcat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eliminando-aplicaciones-y-archivos-innecesarios-de-tomcat-opcional">Eliminando aplicaciones y archivos innecesarios de Tomcat (opcional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creadno-usuario-de-administracion-para-tomcat-opcional">Creadno usuario de administración para Tomcat (opcional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cambio-de-encoding-para-la-aplicacion">Cambio de <em>encoding</em> para la aplicación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#agregando-biblioteca-apr-nativa">Agregando biblioteca APR nativa</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#instalando-dependencias">Instalando dependencias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compilando-apr">Compilando APR</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#creando-servicio-para-tomcat">Creando servicio para Tomcat</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creacion-de-usuario-de-sistema-para-tomcat">Creación de usuario de sistema para tomcat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creando-archivo-init-de-tomcat">Creando archivo init de Tomcat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#se-instala-y-activa-del-servicio-creado">Se instala y activa del servicio creado</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#iniciado-de-tomcat-por-primera-vez">Iniciado de tomcat por primera vez</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#firewall-para-tomcat">Firewall para Tomcat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#instalando-apache-incompleto">Instalando apache &lt;- incompleto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#instalacion-de-las-aplicaciones-en-tomcat">Instalación de las aplicaciones en Tomcat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#metodo-para-desarrollo">Método para desarrollo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#metodo-para-produccion-incompleto">Método para producción &lt;- incompleto</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#comprobacion-de-la-instalacion">Comprobación de la instalación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creando-usuario-administrador">Creando usuario administrador</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vagrant.html">Instalación y configuración de VAGRANT en CENTOS 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vagrant.html#instalacion-de-apache-tomcat-7">Instalación de Apache Tomcat 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../checklist/after-install.html">Lista de verificación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dockers/resources.html">Recursos de inicialización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/hostname-conf.html">Configuración del Hostname</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/how-to-configure-apache-virtual-host.html">Pre-Requisitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/how-to-configure-apache-virtual-host.html#crear-la-estructura-de-directorios">Crear la estructura de Directorios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/how-to-configure-apache-virtual-host.html#configurar-los-permisos">Configurar los permisos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/how-to-configure-apache-virtual-host.html#crear-las-paginas-demo-para-cada-virtual-host">Crear las páginas Demo para cada Virtual Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/how-to-configure-apache-virtual-host.html#crear-los-archivos-de-configuracion-para-cada-virtual-host">Crear los archivos de configuración para cada Virtual Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/how-to-configure-apache-virtual-host.html#crear-los-archivos-de-cada-virtual-host">Crear los archivos de cada Virtual Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/how-to-configure-apache-virtual-host.html#habilitar-los-archivos">Habilitar los Archivos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/how-to-configure-apache-virtual-host.html#probar-la-configuracion">Probar la configuración</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/installation-guidelines.html">Guías y Convenciones para Instalaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/iptables-conf.html">Configuración de IPTABLES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/java-install.html">Instalación de Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/linux-networking.html">Mostrar la interfaces de Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/mkdir.html">Crear estructura en una linea</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/nmap.html">Escanear por IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/nmap.html#escanear-por-ip-y-puerto">Escanear por IP y Puerto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/nmap.html#scanear-por-protocolos">Scanear por protocolos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/scp.html">SCP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/ssh-conf.html">Precondiciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/ssh-conf.html#generar-llave-privada-y-publica">Generar llave Privada y Pública</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/ssh-conf.html#copiar-la-llave-publica">Copiar la llave Pública</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/ssh-conf.html#referencias">Referencias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/tar-zip.html">tar con gzip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/tar-zip.html#tar-with-bzip2">tar with bzip2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/tar-zip.html#utilizar-tar-con-xz">Utilizar tar con xz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/tar-zip.html#utilizar-zip">Utilizar ZIP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principios/tar-zip.html#realizar-respaldo-del-sistema-linux-completo">Realizar respaldo del sistema LINUX - COMPLETO</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Base de conocimientos</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>Instalación de Tomcat</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/linux/centos7/tomcat-conf.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="instalacion-de-tomcat">
+<span id="instalacion-de-tomcat"></span><h1>Instalación de Tomcat<a class="headerlink" href="#instalacion-de-tomcat" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="actualizacion-de-paquetes">
+<span id="actualizacion-de-paquetes"></span><h2>Actualización de paquetes<a class="headerlink" href="#actualizacion-de-paquetes" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Antes de empezar la instalación se recomienda tener actualizado el sistema:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo yum -y update
+</pre></div>
+</div>
+<p>posteriormente, si es que cambió la versión del kernel, podría ser necesario reiniciar el servidor:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo reboot
+</pre></div>
+</div>
+<blockquote>
+<div>Este paso debe ser considerado antes de realizarse; pues si es que el servidor se accede remotamente, es posible que se requiera una solicitud adicional para poder reiniciar el servidor.</div></blockquote>
+</div>
+<div class="section" id="instalacion-de-tomcat-8">
+<span id="instalacion-de-tomcat-8"></span><h2>Instalación de Tomcat 8<a class="headerlink" href="#instalacion-de-tomcat-8" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="descargando-tomcat">
+<span id="descargando-tomcat"></span><h3>Descargando Tomcat<a class="headerlink" href="#descargando-tomcat" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Tomcat 8 se puede descargar de la página de <a class="reference external" href="https://tomcat.apache.org/download-80.cgi">Descargas Apache Tomcat 8</a>.</p>
+</div>
+<div class="section" id="descomprimiendo-tomcat">
+<span id="descomprimiendo-tomcat"></span><h3>Descomprimiendo Tomcat<a class="headerlink" href="#descomprimiendo-tomcat" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo mkdir /usr/local/tomcat
+$ sudo tar zxf apache-tomcat-8.0.30.tar.gz -C /usr/local/tomcat
+$ sudo ln -s /usr/local/tomcat/apache-tomcat-8.0.30 /usr/local/tomcat/current
+</pre></div>
+</div>
+<blockquote>
+<div>Cuando se hizo esta guía, la última versión de Tomcat 8 era la 8.0.30.</div></blockquote>
+</div>
+<div class="section" id="eliminando-aplicaciones-y-archivos-innecesarios-de-tomcat-opcional">
+<span id="eliminando-aplicaciones-y-archivos-innecesarios-de-tomcat-opcional"></span><h3>Eliminando aplicaciones y archivos innecesarios de Tomcat (opcional)<a class="headerlink" href="#eliminando-aplicaciones-y-archivos-innecesarios-de-tomcat-opcional" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> /usr/local/tomcat/current/webapps
+$ sudo rm -rf docs examples ROOT
+$ sudo rm -f /usr/local/tomcat/current/bin/*.bat
+</pre></div>
+</div>
+</div>
+<div class="section" id="creadno-usuario-de-administracion-para-tomcat-opcional">
+<span id="creadno-usuario-de-administracion-para-tomcat-opcional"></span><h3>Creadno usuario de administración para Tomcat (opcional)<a class="headerlink" href="#creadno-usuario-de-administracion-para-tomcat-opcional" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para tener un usuario que pueda administrar y monitorear a Tomcat vía Web (por medio de la app <code class="docutils literal"><span class="pre">manager</span></code>), se requiere modificar el archivo <code class="docutils literal"><span class="pre">/usr/local/tomcat/current/conf/tomcat-users.xml</span></code>.</p>
+<p>Se deden descomentar y modificar las líneas:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="c">&lt;!--</span>
+<span class="c">  &lt;role rolename=&quot;tomcat&quot;/&gt;</span>
+<span class="c">  &lt;role rolename=&quot;role1&quot;/&gt;</span>
+<span class="c">  &lt;user username=&quot;tomcat&quot; password=&quot;tomcat&quot; roles=&quot;tomcat&quot;/&gt;</span>
+<span class="c">  &lt;user username=&quot;both&quot; password=&quot;tomcat&quot; roles=&quot;tomcat,role1&quot;/&gt;</span>
+<span class="c">  &lt;user username=&quot;role1&quot; password=&quot;tomcat&quot; roles=&quot;role1&quot;/&gt;</span>
+<span class="c">--&gt;</span>
+</pre></div>
+</div>
+<p>Nuestro archivo quedó de la siguiente manera:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&#39;1.0&#39; encoding=&#39;utf-8&#39;?&gt;</span>
+<span class="c">&lt;!--</span>
+<span class="c">  Licensed to the Apache Software Foundation (ASF) under one or more</span>
+<span class="c">  contributor license agreements.  See the NOTICE file distributed with</span>
+<span class="c">  this work for additional information regarding copyright ownership.</span>
+<span class="c">  The ASF licenses this file to You under the Apache License, Version 2.0</span>
+<span class="c">  (the &quot;License&quot;); you may not use this file except in compliance with</span>
+<span class="c">  the License.  You may obtain a copy of the License at</span>
+
+<span class="c">      http://www.apache.org/licenses/LICENSE-2.0</span>
+
+<span class="c">  Unless required by applicable law or agreed to in writing, software</span>
+<span class="c">  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c">  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c">  See the License for the specific language governing permissions and</span>
+<span class="c">  limitations under the License.</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;tomcat-users</span> <span class="na">xmlns=</span><span class="s">&quot;http://tomcat.apache.org/xml&quot;</span>
+              <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+              <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://tomcat.apache.org/xml tomcat-users.xsd&quot;</span>
+              <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<span class="c">&lt;!--</span>
+<span class="c">  NOTE:  By default, no user is included in the &quot;manager-gui&quot; role required</span>
+<span class="c">  to operate the &quot;/manager/html&quot; web application.  If you wish to use this app,</span>
+<span class="c">  you must define such a user - the username and password are arbitrary.</span>
+<span class="c">--&gt;</span>
+<span class="c">&lt;!--</span>
+<span class="c">  NOTE:  The sample user and role entries below are wrapped in a comment</span>
+<span class="c">  and thus are ignored when reading this file. Do not forget to remove</span>
+<span class="c">  &lt;!.. ..&gt; that surrounds them.</span>
+<span class="c">--&gt;</span>
+  <span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;tomcat&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;manager-gui&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;user</span> <span class="na">username=</span><span class="s">&quot;tomcat-admin&quot;</span> <span class="na">password=</span><span class="s">&quot;no_se_muestra&quot;</span> <span class="na">roles=</span><span class="s">&quot;tomcat,manager-gui&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/tomcat-users&gt;</span>
+</pre></div>
+</div>
+<blockquote>
+<div>El password del usuario se guarda en texto plano, en su instalación tendrán que cambiar el password.</div></blockquote>
+</div>
+<div class="section" id="cambio-de-encoding-para-la-aplicacion">
+<span id="cambio-de-encoding-para-la-aplicacion"></span><h3>Cambio de <em>encoding</em> para la aplicación<a class="headerlink" href="#cambio-de-encoding-para-la-aplicacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Las aplicaciones requieren <em>UTF-8</em> como codificación de caracteres, por tal motivo, se requiere modificar el archivo <code class="docutils literal"><span class="pre">/usr/local/tomcat/current/conf/server.xml</span></code>.</p>
+<p>Las líneas:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;Connector</span> <span class="na">port=</span><span class="s">&quot;8080&quot;</span> <span class="na">protocol=</span><span class="s">&quot;HTTP/1.1&quot;</span>
+           <span class="na">connectionTimeout=</span><span class="s">&quot;20000&quot;</span>
+           <span class="na">redirectPort=</span><span class="s">&quot;8443&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>se cambían por:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;Connector</span> <span class="na">port=</span><span class="s">&quot;8080&quot;</span> <span class="na">protocol=</span><span class="s">&quot;HTTP/1.1&quot;</span>
+           <span class="na">connectionTimeout=</span><span class="s">&quot;20000&quot;</span>
+           <span class="na">redirectPort=</span><span class="s">&quot;8443&quot;</span>
+           <span class="na">maxThreads=</span><span class="s">&quot;150&quot;</span>
+           <span class="na">minSpareThreads=</span><span class="s">&quot;25&quot;</span>
+           <span class="na">maxSpareThreads=</span><span class="s">&quot;75&quot;</span>
+           <span class="na">enableLookups=</span><span class="s">&quot;false&quot;</span>
+           <span class="na">acceptCount=</span><span class="s">&quot;100&quot;</span>
+           <span class="na">disableUploadTimeout=</span><span class="s">&quot;true&quot;</span>
+           <span class="na">URIEncoding=</span><span class="s">&quot;UTF-8&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<blockquote>
+<div>Adicionalmente se agregan configuraciones para mejorar el rendimiento del sistema.</div></blockquote>
+</div>
+<div class="section" id="agregando-biblioteca-apr-nativa">
+<span id="agregando-biblioteca-apr-nativa"></span><h3>Agregando biblioteca APR nativa<a class="headerlink" href="#agregando-biblioteca-apr-nativa" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="instalando-dependencias">
+<span id="instalando-dependencias"></span><h4>Instalando dependencias<a class="headerlink" href="#instalando-dependencias" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo yum install openssl-devel
+$ sudo yum groupinstall <span class="s2">&quot;Development Tools&quot;</span>
+$ sudo yum install apr-devel
+</pre></div>
+</div>
+</div>
+<div class="section" id="compilando-apr">
+<span id="compilando-apr"></span><h4>Compilando APR<a class="headerlink" href="#compilando-apr" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ cd /tmp
+$ tar -zxvf /usr/local/tomcat/current/bin/tomcat-native.tar.gz
+$ cd tomcat-native-*-src/jni/native
+$ /configure --with-apr=/usr/bin/apr-1-config --with-java-home=/usr/java/current
+$ make
+$ sudo make install
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="creando-servicio-para-tomcat">
+<span id="creando-servicio-para-tomcat"></span><h3>Creando servicio para Tomcat<a class="headerlink" href="#creando-servicio-para-tomcat" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="creacion-de-usuario-de-sistema-para-tomcat">
+<span id="creacion-de-usuario-de-sistema-para-tomcat"></span><h4>Creación de usuario de sistema para tomcat<a class="headerlink" href="#creacion-de-usuario-de-sistema-para-tomcat" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo useradd -r -d /usr/local/tomcat/current tomcat
+$ sudo chown -R tomcat:tomcat /usr/local/tomcat/apache-tomcat-*
+</pre></div>
+</div>
+</div>
+<div class="section" id="creando-archivo-init-de-tomcat">
+<span id="creando-archivo-init-de-tomcat"></span><h4>Creando archivo init de Tomcat<a class="headerlink" href="#creando-archivo-init-de-tomcat" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Para el servicio de Tomcat, tenemos que crear el archivo <code class="docutils literal"><span class="pre">/usr/lib/systemd/system/tomcat.service</span></code> como el siguiente:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Systemd unit file for tomcat</span>
+
+<span class="k">[Unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">Jakarta Tomcat 8 server</span>
+<span class="na">After</span><span class="o">=</span><span class="s">syslog.target network.target</span>
+<span class="na">Conflicts</span><span class="o">=</span><span class="s">glassfish.service</span>
+
+<span class="k">[Service]</span>
+<span class="na">Type</span><span class="o">=</span><span class="s">forking</span>
+
+<span class="na">Environment</span><span class="o">=</span><span class="s">JAVA_HOME=/usr/java/current</span>
+<span class="na">Environment</span><span class="o">=</span><span class="s">CATALINA_PID=/usr/local/tomcat/current/temp/tomcat.pid</span>
+<span class="na">Environment</span><span class="o">=</span><span class="s">CATALINA_HOME=/usr/local/tomcat/current</span>
+<span class="na">Environment</span><span class="o">=</span><span class="s">CATALINA_BASE=/usr/local/tomcat/current</span>
+<span class="na">Environment</span><span class="o">=</span><span class="s">&#39;CATALINA_OPTS=-XX:PermSize=128m -XX:MaxPermSize=512m -Xms512M -Xmx2048M -server -XX:+UseParallelGC -Djava.library.path=/usr/local/apr/lib&#39;</span>
+<span class="na">Environment</span><span class="o">=</span><span class="s">&#39;JAVA_OPTS=-Djava.awt.headless=true -Djava.security.egd=file:/dev/urandom&#39;</span>
+
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/tomcat/current/bin/startup.sh</span>
+<span class="na">ExecStop</span><span class="o">=</span><span class="s">/usr/local/tomcat/current/bin/shutdown.sh</span>
+
+<span class="na">User</span><span class="o">=</span><span class="s">tomcat</span>
+<span class="na">Group</span><span class="o">=</span><span class="s">tomcat</span>
+
+<span class="k">[Install]</span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</pre></div>
+</div>
+<blockquote>
+<div>En su instalación, deberán asegurarse que los valores de la variable <code class="docutils literal"><span class="pre">CATALINA_OPTS</span></code> son adecuados para la cantidad de memoria física que tiene su servidor.</div></blockquote>
+</div>
+<div class="section" id="se-instala-y-activa-del-servicio-creado">
+<span id="se-instala-y-activa-del-servicio-creado"></span><h4>Se instala y activa del servicio creado<a class="headerlink" href="#se-instala-y-activa-del-servicio-creado" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo systemctl daemon-reload
+$ sudo systemctl <span class="nb">enable</span> tomcat
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="iniciado-de-tomcat-por-primera-vez">
+<span id="iniciado-de-tomcat-por-primera-vez"></span><h3>Iniciado de tomcat por primera vez<a class="headerlink" href="#iniciado-de-tomcat-por-primera-vez" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo systemctl start tomcat
+$ sudo systemctl -l status tomcat
+</pre></div>
+</div>
+</div>
+<div class="section" id="firewall-para-tomcat">
+<span id="firewall-para-tomcat"></span><h3>Firewall para Tomcat<a class="headerlink" href="#firewall-para-tomcat" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo firewall-cmd --zone<span class="o">=</span>public --add-port<span class="o">=</span><span class="m">8080</span>/tcp --permanent
+$ sudo firewall-cmd --reload
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="instalando-apache-incompleto">
+<span id="instalando-apache-incompleto"></span><h2>Instalando apache &lt;- incompleto<a class="headerlink" href="#instalando-apache-incompleto" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo yum -y install httpd
+$ sudo systemctl <span class="nb">enable</span> httpd
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion-de-las-aplicaciones-en-tomcat">
+<span id="instalacion-de-las-aplicaciones-en-tomcat"></span><h2>Instalación de las aplicaciones en Tomcat<a class="headerlink" href="#instalacion-de-las-aplicaciones-en-tomcat" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los proyectos están compuesto por varias aplicaciones (cada una de ellas es un directorio), en el manual de instalación describen la función de cada uno de ellas.</p>
+<div class="section" id="metodo-para-desarrollo">
+<span id="metodo-para-desarrollo"></span><h3>Método para desarrollo<a class="headerlink" href="#metodo-para-desarrollo" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>En este método simplemente se copian las aplicaciones al directorio <code class="docutils literal"><span class="pre">webapps</span></code> de tomcat.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo systemctl stop tomcat
+$ sudo su tomcat -c <span class="s2">&quot;cp -r /usr/local/dspace/dspace54/webapps/* /usr/local/tomcat/current/webapps&quot;</span>
+$ sudo systemctl start tomcat
+</pre></div>
+</div>
+<blockquote>
+<div>La primera vez que se iniica el servidor puede tardar más de lo habitual debido a que se genera la base de datos.</div></blockquote>
+</div>
+<div class="section" id="metodo-para-produccion-incompleto">
+<span id="metodo-para-produccion-incompleto"></span><h3>Método para producción &lt;- incompleto<a class="headerlink" href="#metodo-para-produccion-incompleto" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Este método crea un archivo de configuración por aplicación y permite modificar las opciones de cache del servidor de aplicaciones.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo systemctl stop tomcat
+...
+$ sudo systemctl start tomcat
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="comprobacion-de-la-instalacion">
+<span id="comprobacion-de-la-instalacion"></span><h2>Comprobación de la instalación<a class="headerlink" href="#comprobacion-de-la-instalacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Una vez terminado la inicialización de tomcat (esto se puede ver en el archivo de <em>log</em> de tomcat: <code class="docutils literal"><span class="pre">/usr/local/tomcat/current/logs/catalina.out</span></code>), podemos acceder a la página inicial de DSpace <code class="docutils literal"><span class="pre">http://&lt;IP_DEL_SERVIDOR&gt;:8080/xmlpui</span></code>.</p>
+<blockquote>
+<div>Antes de crear el usuario administrador, asegúrese que el servicio de tomcat inició correctamente.</div></blockquote>
+</div>
+<div class="section" id="creando-usuario-administrador">
+<span id="creando-usuario-administrador"></span><h2>Creando usuario administrador<a class="headerlink" href="#creando-usuario-administrador" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para crear el usuario administrador, tendremos que ejecutar un comando que se encuentra en el directorio de instalación de DSPace con el usuario del servidor de aplicaciones:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo su tomcat -c <span class="s2">&quot;/usr/local/dspace/dspace54/bin/dspace create-administrator&quot;</span>
+
+Creating an initial administrator account
+E-mail address: admin@dspacelocal.com
+First name: Usuario
+Last name: Administrador
+Password will not display on screen.
+Password:
+Again to confirm:
+Is the above data correct? <span class="o">(</span>y or n<span class="o">)</span>: y
+Administrator account created
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="vagrant.html" class="btn btn-neutral float-right" title="Instalación y configuración de VAGRANT en CENTOS 7" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="postgresql-install.html" class="btn btn-neutral" title="Instalación de PostgreSQL en CentOS 7" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, DADS Infotec.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

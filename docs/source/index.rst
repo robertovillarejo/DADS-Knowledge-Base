@@ -8,7 +8,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :caption: General:
+   :caption: General
 
    description
    getting-started
@@ -20,10 +20,14 @@
    about-developer
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
   :caption: Java
 
-  java/index
+  java/jhipster/index
+  java/spring/index
+  java/maven/maven-guidelines
+  java/config/cer-config
+  java/arquitectura/componentes/plugins/mybatis/mybatis-gen-addon
 
 .. toctree::
   :maxdepth: 2
@@ -37,10 +41,14 @@
 
   angular/index
 
+.. toctree::
+  :maxdepth: 1
+  :caption: Linux
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+  linux/centos7/index
+  linux/principios/index
+  linux/admin/extend-vm
+  linux/admin/monitoring
+  linux/checklist/after-install
+  linux/dockers/resources
+  

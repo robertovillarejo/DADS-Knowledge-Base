@@ -1,7 +1,7 @@
 JHipster
 --------
 
-Traducción al español de la documentación oficial de [JHipster](www.jhipster.tech)
+Traducción al español de la documentación oficial de JHipster (www.jhipster.tech)
 
 .. toctree::
   :maxdepth: 2
