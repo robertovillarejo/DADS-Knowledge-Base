@@ -1,6 +1,3 @@
-Arquitectura
-------------
-
 .. toctree::
   :maxdepth: 2
 

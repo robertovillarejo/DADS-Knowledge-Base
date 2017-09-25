@@ -1,6 +1,3 @@
-Java
-----
-
 En esta sección encontrarás documentación sobre el lenguaje Java.
 
 .. toctree::

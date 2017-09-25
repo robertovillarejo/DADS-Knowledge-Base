@@ -1,6 +1,3 @@
-Angular
--------
-
 .. toctree::
   :maxdepth: 2
 
