@@ -51,4 +51,16 @@
   linux/admin/monitoring
   linux/checklist/after-install
   linux/dockers/resources
-  
+  linux/linux-guideliness
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Pruebas
+
+  pruebas/intro-cucumber
+
+.. toctree::
+  :maxdepth: 1
+  :caption: SCM
+
+  scm/index

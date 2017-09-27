@@ -14,3 +14,4 @@ Traducción al español de la documentación oficial de JHipster (www.jhipster.t
   internacionalizacion
   actualizando-una-aplicacion
   jdl
+  arquitectura-angular-spring-boot

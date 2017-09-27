@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introducción a BDD (Behaviour Driver Development) con Cucumber. &mdash; documentación de Base de conocimientos - 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Búsqueda" href="../search.html"/>
+    <link rel="top" title="documentación de Base de conocimientos - 0.1" href="../index.html"/>
+        <link rel="prev" title="Recursos de inicialización" href="../linux/dockers/resources.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Base de conocimientos
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../description.html">Descripción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Primeros pasos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Uso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs.html">Preguntas y Respuestas Frecuentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">Licencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../known-issues.html">Issues conocidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contribuciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about-developer.html">Sobre el Desarrollador</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Java</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../java/jhipster/index.html">JHipster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/spring/spring-data-reference.html">Spring Data Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/spring/spring-data.html">Spring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/maven/maven-guidelines.html">Líneamiento - Maven</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/config/cer-config.html">Instalar certificado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/config/cer-config.html#update">Update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/arquitectura/componentes/plugins/mybatis/mybatis-gen-addon.html">Mybatis</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Arquitectura</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../arquitectura/rol-arquitecto.html">El Rol de El Arquitecto de Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arquitectura/servicio-arquitectura.html">Servicios</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Angular</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../angular/angular-config.html">Configuración de Angular para Ubuntu 16.04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../angular/guideliness.html">Las mejores prácticas de desarrollo Angular JS las puedes consultar en:</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../linux/centos7/apache.html">Apache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/centos7/coreos.html">CoreOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/centos7/dockers.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/centos7/mysql-conf.html">Instalación de MySQL en CentOS 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/centos7/postgresql-install.html">Instalación de PostgreSQL en CentOS 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/centos7/tomcat-conf.html">Instalación de Tomcat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/centos7/vagrant.html">Instalación y configuración de VAGRANT en CENTOS 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/centos7/vagrant.html#instalacion-de-apache-tomcat-7">Instalación de Apache Tomcat 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/hostname-conf.html">Configuración del Hostname</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/how-to-configure-apache-virtual-host.html">Pre-Requisitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/how-to-configure-apache-virtual-host.html#crear-la-estructura-de-directorios">Crear la estructura de Directorios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/how-to-configure-apache-virtual-host.html#configurar-los-permisos">Configurar los permisos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/how-to-configure-apache-virtual-host.html#crear-las-paginas-demo-para-cada-virtual-host">Crear las páginas Demo para cada Virtual Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/how-to-configure-apache-virtual-host.html#crear-los-archivos-de-configuracion-para-cada-virtual-host">Crear los archivos de configuración para cada Virtual Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/how-to-configure-apache-virtual-host.html#crear-los-archivos-de-cada-virtual-host">Crear los archivos de cada Virtual Host</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/how-to-configure-apache-virtual-host.html#habilitar-los-archivos">Habilitar los Archivos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/how-to-configure-apache-virtual-host.html#probar-la-configuracion">Probar la configuración</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/installation-guidelines.html">Guías y Convenciones para Instalaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/iptables-conf.html">Configuración de IPTABLES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/java-install.html">Instalación de Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/linux-networking.html">Mostrar la interfaces de Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/mkdir.html">Crear estructura en una linea</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/nmap.html">Escanear por IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/nmap.html#escanear-por-ip-y-puerto">Escanear por IP y Puerto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/nmap.html#scanear-por-protocolos">Scanear por protocolos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/scp.html">SCP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/ssh-conf.html">Precondiciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/ssh-conf.html#generar-llave-privada-y-publica">Generar llave Privada y Pública</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/ssh-conf.html#copiar-la-llave-publica">Copiar la llave Pública</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/ssh-conf.html#referencias">Referencias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/tar-zip.html">tar con gzip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/tar-zip.html#tar-with-bzip2">tar with bzip2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/tar-zip.html#utilizar-tar-con-xz">Utilizar tar con xz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/tar-zip.html#utilizar-zip">Utilizar ZIP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/principios/tar-zip.html#realizar-respaldo-del-sistema-linux-completo">Realizar respaldo del sistema LINUX - COMPLETO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/admin/extend-vm.html">Extender LVM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/admin/monitoring.html">Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/checklist/after-install.html">Lista de verificación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/dockers/resources.html">Recursos de inicialización</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pruebas</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introducción a BDD (Behaviour Driver Development) con Cucumber.</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#que-es-bdd">¿Qué es BDD?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#y-como-hacemos-esto">¿Y cómo hacemos estó?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#y-como-funciona-con-cucumber">¿Y cómo funciona con Cucumber?</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Base de conocimientos</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Introducción a BDD (Behaviour Driver Development) con Cucumber.</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pruebas/intro-cucumber.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <blockquote>
+<div><strong>Autor</strong> : Ivan Rodrigo Nievez Mondragon<strong>Correo</strong>: ivan.nievez&#64;infotec.mx</div></blockquote>
+<div class="section" id="introduccion-a-bdd-behaviour-driver-development-con-cucumber">
+<span id="introduccion-a-bdd-behaviour-driver-development-con-cucumber"></span><h1>Introducción a BDD (Behaviour Driver Development) con Cucumber.<a class="headerlink" href="#introduccion-a-bdd-behaviour-driver-development-con-cucumber" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="que-es-bdd">
+<span id="que-es-bdd"></span><h2>¿Qué es BDD?<a class="headerlink" href="#que-es-bdd" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><em>BDD</em> es un proceso de desarrollo software, si bien se relaciona principalmente con el Testing, que es de donde surge, trata de combinar los elementos técnicos y los de negocio, de manera que tengamos un marco de trabajo, y un marco de pruebas, en el que los requisitos de negocio formen parte del proceso de desarrollo, escribiendo primero las pruebsa y desde ahí, el desarrollo.</p>
+<p>En <em>BDD</em> en lugar de escribir pruenbas unitarias, lo que haremos es escribir, pruebas que verifiquien que el comportamiento del código es correcto desde el punto de vista del negicio. Al terminar, realizaremos el código fuente de la funcionalidad descrita en la prueba, para que estas pasen correctamente.</p>
+<p>Para poder hacer esto, partiremos de las <em>historias de usuario</em> siguiendo el modelo:</p>
+<ul class="simple">
+<li>Como [rol]</li>
+<li>Quiero [ característica | acción | meta ]</li>
+<li>Para que [beneficio | valor | meta]</li>
+</ul>
+</div>
+<div class="section" id="y-como-hacemos-esto">
+<span id="y-como-hacemos-esto"></span><h2>¿Y cómo hacemos estó?<a class="headerlink" href="#y-como-hacemos-esto" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Bueno, ya que necesitamos un  lenguaje que se pueda interpretar por los usuarios, interesados, testers y desarrolladores, utilizaremos <em>Gherkin</em>.</p>
+<p><em>Gherkin</em> es un lenguaje entendible por el negocio, lo que se llama un DSL (Domain-Specific Language), más o menos cercano al lenguaje natural. Es un lenguaje muy simple. Sólo tienen 5 sentencias:</p>
+<ul class="simple">
+<li><strong>Features:</strong> Indica el nombre de la funcionalidad que vamos a probar. Debe ser un título claro y explícito. Aquí es donde podemos usar el modelo de las <em>historias de usuario</em>, sobre esta descripción empezaremos a construir nuestros escenarios de prueba.</li>
+<li><strong>Scenario:</strong> Describe cada escenario que vamos a probar.</li>
+<li><strong>Given:</strong> Provee contexto para el escenario en que se va a ejecutar el test, tales como punto donde se ejecuta el test, o prerequisitos en los datos. Incluye los pasos necesarios para poner al sistema en el estado que se desea probar.</li>
+<li><strong>When:</strong> Especifica el conjunto de acciones que lanzan el test. La interacción del usuario que acciona la funcionalidad que deseamos testear.</li>
+<li><strong>Then:</strong> Especifica el resultado esperado en el test. Observamos los cambios en el sistema y vemos si son los deseados.</li>
+</ul>
+</div>
+<div class="section" id="y-como-funciona-con-cucumber">
+<span id="y-como-funciona-con-cucumber"></span><h2>¿Y cómo funciona con Cucumber?<a class="headerlink" href="#y-como-funciona-con-cucumber" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><em>Cucumber</em> es un framework que nos ayuda a escribir y ejecutar descripciones de alto nivel del funcionamiento de nuestro software y que podemos utilizar para automatizar nuestras pruebas en BDD.
+Una de las principales carecteristicas de este framework, es que nos permite escribir estas descripciones en texto plano y en nuestro idioma nativo.</p>
+<p>Las descripciones de nuestras <em>historias de usuario</em> se guardan en archivos <em>.features</em> escritos en el lenguaje <em>Gherkin</em>. A continuacion mostraremos un ejemplo.</p>
+<div class="highlight-Gherkin"><div class="highlight"><pre><span></span><span class="k">Feature:</span><span class="nf"> Como Cliente,</span>
+<span class="nf">         quiero retirar efectivo de un ATM</span>
+<span class="nf">         para que no tenga que esperar en la fila en el banco</span>
+
+<span class="nf"> </span><span class="k">Scenario:</span><span class="nf"> se desea retirar dinero con una cuenta solvente</span>
+<span class="k">    Given </span><span class="nf">la Cuenta es solvente</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">el ATM contiene efectivo</span>
+<span class="nf">    </span><span class="k">When </span><span class="nf">el Cliente solicita retirar dinero</span>
+<span class="nf">    </span><span class="k">Then </span><span class="nf">el sistema se asegura que la cuenta tiene dinero</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">se asegura que el efectivo es entregado</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">se asegura que la tarjeta es regresada</span>
+
+<span class="nf"> </span><span class="k">Scenario:</span><span class="nf"> se desea retirar dinero pero la cuenta no tiene solvencia</span>
+<span class="k">    Given </span><span class="nf">la cuenta esta sobregirada</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">la tarjeta es valida</span>
+<span class="nf">    </span><span class="k">When </span><span class="nf">el Cliente solicita retirar dinero</span>
+<span class="nf">    </span><span class="k">Then </span><span class="nf">el Sistema se asegura de mostrar al Cliente un mensaje en el que se le indica que no es posible retirar dinero</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">se asegura que el dinero no es entregado</span>
+</pre></div>
+</div>
+<p><strong>Nota:</strong> <em>Gherkin</em> tiene 5 sentencias para su uso, pero en el segundo escenario en la última línea podemos notar el uso de la palabra <em>And</em>, esta palabra puede ser utilizada en cualquier parte de la descripción del escenario para evitar repetir (Given, When, Then).</p>
+<p>Descripción del ejemplo completo:
+https://gist.github.com/danimaniarqsoft/640d512c3b183fdef1a2856354c83068</p>
+<p>Fuentes:
+https://www.genbetadev.com/metodologias-de-programacion/bdd-cucumber-y-gherkin-desarrollo-dirigido-por-comportamiento
+http://www.javiergarzas.com/2014/12/bdd-behavior-driven-development-1.html
+https://blog.engineyard.com/2009/cucumber-introduction</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../linux/dockers/resources.html" class="btn btn-neutral" title="Recursos de inicialización" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, DADS Infotec.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

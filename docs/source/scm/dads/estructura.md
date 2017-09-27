@@ -1,0 +1,65 @@
+# Estructura de carpetas para los proyectos de la DADS
+
+A continuación se muestra la estructura que deberá de tener todos los proyectos de la DADS:
+
+* ![alt text](image/folder.png) **[NombreProyecto]**
+  * ![alt text](image/folder.png) **administracionProyecto**
+    * ![alt text](image/folder.png) **00DocAdminCliente**
+    * ![alt text](image/folder.png) **01PreparacionLanzamiento**
+      * ![alt text](image/file.png) launchPreparation.doc
+      * ![alt text](image/file.png) TSP-PACE-Data Collection Forms-1 Project Questionaire.doc
+      * ![alt text](image/xls.png) workbook.xlsx
+    * ![alt text](image/folder.png) **02Lanzamiento**
+      * ![alt text](image/folder.png) **docsCoache**
+        * ![alt text](image/xls.png) workbook[NomEquipo].xlsx
+        * ![alt text](image/xls.png) planCoacheo-[NomEquipo].xlsx
+        * ![alt text](image/file.png) expedienteProyecto-[NomEquipo].docx
+        * ![alt text](image/file.png) documentoInformacionProducto(PQI)
+      * ![alt text](image/folder.png) **junta1**
+        * ![alt text](image/presentation.png) presentacionCliente.pptx
+        * ![alt text](image/presentation.png) presentacionGerencia.pptx
+      * ![alt text](image/folder.png) **junta3**
+        * ![alt text](image/diagram.png) disennoConceptual
+      * ![alt text](image/folder.png) **junta4**
+        * ![alt text](image/zip.png) wbsGeneral.zip
+        * ![alt text](image/zip.png) wbsGeneralAlt-[NUMERO].zip
+      * ![alt text](image/folder.png) **junta6**
+        * ![alt text](image/zip.png) wbsBottomUp.zip
+        * ![alt text](image/zip.png) wbsBottomUpAlt-[NUMERO].zip
+      * ![alt text](image/folder.png) **junta9**
+        * ![alt text](image/presentation.png) presentacionPlan.pptx
+        * ![alt text](image/zip.png) wbsBackup.zip
+    ** ![alt text](image/folder.png) **03Segumiento**
+      * ![alt text](image/xls.png) workbook-[NOMBRE_EQUIPO].xlsx
+      * ![alt text](image/folder.png) **avanceEquipo**
+        * ![alt text](image/folder.png) **respaldosIndividuales**
+          * ![alt text](image/zip.png) pdash-[NOMBRE_COMPLETO]-[aaaa]-[aa]-[dd].zip
+        * ![alt text](image/folder.png) **semana[NUMERO]**
+          * ![alt text](image/folder.png) **presentacionesIndividuales**
+            * ![alt text](image/zip.png) weekReport[aaaammddd]_[INICIALES]_dads_strategy[aaaa].zip
+      * ![alt text](image/folder.png) **avanceGerencia**
+        * ![alt text](image/folder.png) **semana[NUMERO]**
+          * ![alt text](image/presentation.png) reporteEquipo[aaaammdd].pptx
+          * ![alt text](image/xls.png) minutas.xlsx
+      * ![alt text](image/folder.png) **avanceCliente**
+        * ![alt text](image/folder.png) **semana[NUMERO]**
+          * ![alt text](image/presentation.png) reporteEquipo[aaaammdd].pptx
+          * ![alt text](image/file.png) minutas.xlsx
+    * ![alt text](image/folder.png) **04Checkpoint**
+      * ![alt text](image/presentation.png) checkpoint-aaaa-mm-dd.pptx
+      * ![alt text](image/file.png) agendaEntrevistas.docx
+      * ![alt text](image/xls.png) minutaPresentacionCheckpoint.xlsx
+    * ![alt text](image/folder.png) **05Postmortem**
+      * ![alt text](image/xls.png) PMReport-Equipo-aaaa-mm-dd.xlsx
+      * ![alt text](image/zip.png) respaldoPdashboard.zip
+      * ![alt text](image/xls.png) minutaPM.xlsx
+    * ![alt text](image/folder.png) **06Planes**
+  * ![alt text](image/folder.png) **administracionProducto**
+    * ![alt text](image/folder.png) **01ModeladoOrganizacional**
+    * ![alt text](image/folder.png) **02Requerimientos**
+    * ![alt text](image/folder.png) **03AnalisisDisenno**
+    * ![alt text](image/folder.png) **04Implementacion**
+    * ![alt text](image/folder.png) **05Pruebas**
+    * ![alt text](image/folder.png) **06Despliegue**
+    * ![alt text](image/folder.png) **07AdministracionAmbientes**
+    * ![alt text](image/folder.png) **08AdministracionConfiguracion**
