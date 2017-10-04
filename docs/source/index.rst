@@ -11,11 +11,7 @@
    :caption: General
 
    description
-   getting-started
-   usage
-   FAQs
    license
-   known-issues
    contributing
    about-developer
 
@@ -30,7 +26,7 @@
   java/arquitectura/componentes/plugins/mybatis/mybatis-gen-addon
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
   :caption: Arquitectura
 
   arquitectura/index
@@ -45,13 +41,7 @@
   :maxdepth: 1
   :caption: Linux
 
-  linux/centos7/index
-  linux/principios/index
-  linux/admin/extend-vm
-  linux/admin/monitoring
-  linux/checklist/after-install
-  linux/dockers/resources
-  linux/linux-guideliness
+  linux/index
 
 .. toctree::
   :maxdepth: 1
