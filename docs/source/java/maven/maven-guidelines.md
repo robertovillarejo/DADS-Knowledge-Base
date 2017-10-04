@@ -2,7 +2,6 @@
 
 ## Líneamiento para GrouId, ArtifactId y Version
 
----
 ### GroupId
 
 El grupid deberá de identificar al proyecto de manera única con respecto a todos los proyectos de la dirección. Se deberá de seguir las reglas de nombrado de paquetes para java (ver [Java Convention](http://www.oracle.com/technetwork/java/codeconventions-135099.html) y [Packaging Convention](http://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html)), lo que implica contar con un nombre de dominio con el que se pueda controlar su evolución. Se podrán crear los subgrupos que se deseen. A continuación se muestran algunos ejemplos:

@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-!Bienvenido a la Base de conocimientos de la DADS!
-==================================================
+Base de conocimientos de la DADS
+================================
 
 .. toctree::
    :maxdepth: 1
@@ -13,6 +13,7 @@
    description
    license
    about-developer
+   contributing
 
 .. toctree::
   :maxdepth: 2
