@@ -19,3 +19,9 @@
   :caption: JHipster
 
   jhipster/index
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Spring
+
+  spring/index
