@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Nmap: referencia rápida &mdash; documentación de Base de conocimientos - 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../../genindex.html"/>
+        <link rel="search" title="Búsqueda" href="../../search.html"/>
+    <link rel="top" title="documentación de Base de conocimientos - 0.1" href="../../index.html"/>
+        <link rel="up" title="Linux: principios" href="index.html"/>
+        <link rel="next" title="SCP" href="scp.html"/>
+        <link rel="prev" title="Crear estructura en una linea" href="mkdir.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Base de conocimientos
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../description.html">Descripción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Licencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about-developer.html">Sobre el Desarrollador</a></li>
+</ul>
+<p class="caption"><span class="caption-text">JHipster</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../jhipster/index.html">JHipster</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Spring</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../spring/index.html">Spring: documentación en español</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Arquitectura</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../arquitectura/index.html">Arquitectura</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Linux</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Linux</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Linux: principios</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="hostname-conf.html">Configuración del Hostname</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how-to-configure-apache-virtual-host.html">Configuración de Apache Virtual Host</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation-guidelines.html">Guías y Convenciones para Instalaciones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iptables-conf.html">Configuración de IPTABLES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="java-install.html">Instalación de Java</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linux-networking.html">Mostrar la interfaces de Red</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mkdir.html">Crear estructura en una linea</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Nmap: referencia rápida</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#escanear-por-ip">Escanear por IP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#escanear-por-ip-y-puerto">Escanear por IP y Puerto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scanear-por-protocolos">Scanear por protocolos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="scp.html">SCP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ssh-conf.html">Configuración de SSH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tar-zip.html">tar-zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Base de conocimientos</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Linux</a> &raquo;</li>
+        
+          <li><a href="index.html">Linux: principios</a> &raquo;</li>
+        
+      <li>Nmap: referencia rápida</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/linux/principios/nmap.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nmap-referencia-rapida">
+<span id="nmap-referencia-rapida"></span><h1>Nmap: referencia rápida<a class="headerlink" href="#nmap-referencia-rapida" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>Nota</strong> Este documento está basado en <a class="reference external" href="https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/">HackerTarget</a></p>
+<div class="section" id="escanear-por-ip">
+<span id="escanear-por-ip"></span><h2>Escanear por IP<a class="headerlink" href="#escanear-por-ip" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Escanear una <strong>IP</strong></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nmap <span class="m">192</span>.168.1.1
+</pre></div>
+</div>
+<p>Escanear un <strong>host</strong></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nmap www.testhostname.com
+</pre></div>
+</div>
+<p>Escanear un rango de <strong>IP's</strong></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nmap <span class="m">192</span>.168.1.1-20
+</pre></div>
+</div>
+<p>Escanear una <strong>Subnet</strong></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nmap <span class="m">192</span>.168.1.0/24
+</pre></div>
+</div>
+<p>Escanear desde un archivo</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nmap -iL list-of-ips.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="escanear-por-ip-y-puerto">
+<span id="escanear-por-ip-y-puerto"></span><h2>Escanear por IP y Puerto<a class="headerlink" href="#escanear-por-ip-y-puerto" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Escanear un sólo puerto</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nmap -p <span class="m">22</span> <span class="m">192</span>.168.1.1
+</pre></div>
+</div>
+<p>Escanear por un rango de puertos</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nmap -p <span class="m">1</span>-100 <span class="m">192</span>.168.1.1
+</pre></div>
+</div>
+<p>Escanear los puertos <strong>más comúnes</strong></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nmap -F <span class="m">192</span>.168.1.1
+</pre></div>
+</div>
+<p>Escanear todos los <strong>65535</strong></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nmap -p- <span class="m">192</span>.168.1.1
+</pre></div>
+</div>
+</div>
+<div class="section" id="scanear-por-protocolos">
+<span id="scanear-por-protocolos"></span><h2>Scanear por protocolos<a class="headerlink" href="#scanear-por-protocolos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Utilizando la conexión TCP</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nmap -sT <span class="m">192</span>.168.1.1
+</pre></div>
+</div>
+<p>Utilizando la conexión TCP SYN (por Default)</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nmap -sS <span class="m">192</span>.168.1.1
+</pre></div>
+</div>
+<p>Escaneando los puertos <strong>UDP</strong></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nmap -sU -p <span class="m">123</span>,161,162 <span class="m">192</span>.168.1.1
+</pre></div>
+</div>
+<p>Escaneando con puertos seleccionados</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nmap -Pn -F <span class="m">192</span>.168.1.1
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="scp.html" class="btn btn-neutral float-right" title="SCP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mkdir.html" class="btn btn-neutral" title="Crear estructura en una linea" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, DADS Infotec.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

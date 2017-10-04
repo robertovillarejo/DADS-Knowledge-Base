@@ -31,3 +31,9 @@
   :caption: Arquitectura
 
   arquitectura/index
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Linux
+
+  linux/index

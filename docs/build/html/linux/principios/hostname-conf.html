@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Configuración del Hostname &mdash; documentación de Base de conocimientos - 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../../genindex.html"/>
+        <link rel="search" title="Búsqueda" href="../../search.html"/>
+    <link rel="top" title="documentación de Base de conocimientos - 0.1" href="../../index.html"/>
+        <link rel="up" title="Linux: principios" href="index.html"/>
+        <link rel="next" title="Configuración de Apache Virtual Host" href="how-to-configure-apache-virtual-host.html"/>
+        <link rel="prev" title="Linux: principios" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Base de conocimientos
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../description.html">Descripción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Licencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about-developer.html">Sobre el Desarrollador</a></li>
+</ul>
+<p class="caption"><span class="caption-text">JHipster</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../jhipster/index.html">JHipster</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Spring</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../spring/index.html">Spring: documentación en español</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Arquitectura</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../arquitectura/index.html">Arquitectura</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Linux</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Linux</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Linux: principios</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Configuración del Hostname</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#arch-centos-7-debian-8-fedora-version-18-and-above-ubuntu-15-04-and-above">Arch / CentOS 7 / Debian 8 / Fedora version 18 and above / Ubuntu 15.04 and above</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#debian-7-slackware-ubuntu-14-04">Debian 7 / Slackware / Ubuntu 14.04</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#centos-6-fedora-version-17-and-below">CentOS 6 / Fedora version 17 and below</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update-etc-hosts">Update /etc/hosts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="how-to-configure-apache-virtual-host.html">Configuración de Apache Virtual Host</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation-guidelines.html">Guías y Convenciones para Instalaciones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iptables-conf.html">Configuración de IPTABLES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="java-install.html">Instalación de Java</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linux-networking.html">Mostrar la interfaces de Red</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mkdir.html">Crear estructura en una linea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmap.html">Nmap: referencia rápida</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scp.html">SCP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ssh-conf.html">Configuración de SSH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tar-zip.html">tar-zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Base de conocimientos</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Linux</a> &raquo;</li>
+        
+          <li><a href="index.html">Linux: principios</a> &raquo;</li>
+        
+      <li>Configuración del Hostname</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/linux/principios/hostname-conf.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <blockquote>
+<div><strong>Autor</strong> : INFOTEC - DADS</div></blockquote>
+<div class="section" id="configuracion-del-hostname">
+<span id="configuracion-del-hostname"></span><h1>Configuración del Hostname<a class="headerlink" href="#configuracion-del-hostname" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="arch-centos-7-debian-8-fedora-version-18-and-above-ubuntu-15-04-and-above">
+<span id="arch-centos-7-debian-8-fedora-version-18-and-above-ubuntu-15-04-and-above"></span><h2>Arch / CentOS 7 / Debian 8 / Fedora version 18 and above / Ubuntu 15.04 and above<a class="headerlink" href="#arch-centos-7-debian-8-fedora-version-18-and-above-ubuntu-15-04-and-above" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>hostnamectl set-hostname hostname-arq
+</pre></div>
+</div>
+</div>
+<div class="section" id="debian-7-slackware-ubuntu-14-04">
+<span id="debian-7-slackware-ubuntu-14-04"></span><h2>Debian 7 / Slackware / Ubuntu 14.04<a class="headerlink" href="#debian-7-slackware-ubuntu-14-04" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;example_hostname&quot;</span> &gt; /etc/hostname
+hostname -F /etc/hostname
+</pre></div>
+</div>
+<p>Verificar que el archivo <code class="docutils literal"><span class="pre">/etc/default/dhcpcd</span></code> exista</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>cat /etc/default/dhcpcd <span class="p">|</span> grep SET_HOSTNAME
+</pre></div>
+</div>
+<p>Si el valor regresado es <code class="docutils literal"><span class="pre">SET_HOSTNAME='YES'</span></code>, entonces editar el archivo <code class="docutils literal"><span class="pre">/etc/default/dhcpcd</span></code> y descomentar la línea <code class="docutils literal"><span class="pre">SET_HOSTNAME</span></code>:</p>
+<p>Archivo <code class="docutils literal"><span class="pre">Archivo</span> <span class="pre">``/etc/default/dhcpcd</span></code></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1">#SET_HOSTNAME=&#39;yes&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="centos-6-fedora-version-17-and-below">
+<span id="centos-6-fedora-version-17-and-below"></span><h2>CentOS 6 / Fedora version 17 and below<a class="headerlink" href="#centos-6-fedora-version-17-and-below" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;HOSTNAME=hostname&quot;</span> &gt;&gt; /etc/sysconfig/network
+hostname <span class="s2">&quot;hostname&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="update-etc-hosts">
+<span id="update-etc-hosts"></span><h2>Update /etc/hosts<a class="headerlink" href="#update-etc-hosts" title="Enlazar permanentemente con este título">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="how-to-configure-apache-virtual-host.html" class="btn btn-neutral float-right" title="Configuración de Apache Virtual Host" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Linux: principios" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, DADS Infotec.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
