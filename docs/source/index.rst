@@ -25,3 +25,9 @@
   :caption: Spring
 
   spring/index
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Arquitectura
+
+  arquitectura/index
