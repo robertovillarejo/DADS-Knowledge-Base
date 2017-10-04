@@ -1,3 +1,5 @@
+# Configuración de SSH
+
 ### Precondiciones
 1. Se tiene instalada una versión de SSH
 2. Se cuenta con un usuario creado en el sistema operativo
@@ -24,7 +26,7 @@ si se aceptó el archivo por defecto, entonces se tendrá la llave privada ```id
 cat ~/.ssh/id_rsa.pub | xclip -selection c
 ```
 ### En la máquina remota
-en el home 
+en el home
 ```bash
 mkdir .ssh
 chmod 700 .ssh
@@ -44,6 +46,6 @@ chmod 600 .ssh/authorized_keys
 systemctl reload sshd
 ```
 
-# Referencias
+### Referencias
 [Digital Ocean](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7)
 [Github](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)

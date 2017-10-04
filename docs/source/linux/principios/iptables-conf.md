@@ -1,8 +1,8 @@
+# Configuración de IPTABLES
+
 > **Autor** : INFOTEC - DADS
 
 **Nota** El presente documento está basado en [Linux Tips](http://linuxtips-nitin.blogspot.mx/2009/03/linux-iptables-configuration-step-by.html) y [How to Geek](http://www.howtogeek.com/177621/the-beginners-guide-to-iptables-the-linux-firewall/)
-
-# Configuración de IPTABLES
 
 Configuración deseada:
 

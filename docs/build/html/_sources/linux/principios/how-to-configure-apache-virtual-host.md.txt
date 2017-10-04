@@ -1,6 +1,6 @@
+# Configuración de Apache Virtual Host
+
 **Nota**: el presente documento está basado en [Ditial Ocean](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-centos-7)
-
-
 
 ### Pre-Requisitos
 
@@ -9,13 +9,13 @@ Se tiene instalada una versión de [APACHE SERVER](../centos7/apache.md)
 ### Crear la estructura de Directorios
 
 ```bash
-sudo mkdir -p /var/www/example.com/public_html 
+sudo mkdir -p /var/www/example.com/public_html
 sudo mkdir -p /var/www/example2.com/public_html
 ```
 ### Configurar los permisos
 
 ```bash
-sudo chown -R $USER:$USER /var/www/example.com/public_html 
+sudo chown -R $USER:$USER /var/www/example.com/public_html
 sudo chown -R $USER:$USER /var/www/example2.com/public_html
 ```
 
@@ -35,13 +35,13 @@ copiar el siguiente texto
 
 
 ```html
-<html> 
-    <head> 
-        <title>Welcome to Example.com!</title> 
-    </head> 
-    <body> 
-        <h1>Success! The example.com virtual host is working!</h1> 
-    </body> 
+<html>
+    <head>
+        <title>Welcome to Example.com!</title>
+    </head>
+    <body>
+        <h1>Success! The example.com virtual host is working!</h1>
+    </body>
 </html>
 ```
 
@@ -54,7 +54,7 @@ cp /var/www/example.com/public_html/index.html /var/www/example2.com/public_html
 ### Crear los archivos de configuración para cada Virtual Host
 
 ```bash
-sudo mkdir /etc/httpd/sites-available 
+sudo mkdir /etc/httpd/sites-available
 sudo mkdir /etc/httpd/sites-enabled
 ```
 
@@ -76,12 +76,12 @@ sudo vi /etc/httpd/sites-available/example.com.conf
 Agregar lo siguiente:
 
 ```bash
-<VirtualHost *:80> 
-    ServerName www.example.com 
-    ServerAlias example.com 
-    DocumentRoot /var/www/example.com/public_html 
-    ErrorLog /var/www/example.com/error.log 
-    CustomLog /var/www/example.com/requests.log combined 
+<VirtualHost *:80>
+    ServerName www.example.com
+    ServerAlias example.com
+    DocumentRoot /var/www/example.com/public_html
+    ErrorLog /var/www/example.com/error.log
+    CustomLog /var/www/example.com/requests.log combined
 </VirtualHost>
 ```
 
@@ -91,7 +91,7 @@ Copiar el archivo anterior y modificarlo para el segundo host
 sudo cp /etc/httpd/sites-available/example.com.conf /etc/httpd/sites-available/example2.com.conf
 ```
 
-Modificar 
+Modificar
 
 ```bash
 sudo nano /etc/httpd/sites-available/example2.com.conf
@@ -101,17 +101,17 @@ Contenido
 
 
 ```bash
-<VirtualHost *:80> 
-    ServerName www.example2.com 
-    DocumentRoot /var/www/example2.com/public_html 
-    ServerAlias example2.com 
-    ErrorLog /var/www/example2.com/error.log 
+<VirtualHost *:80>
+    ServerName www.example2.com
+    DocumentRoot /var/www/example2.com/public_html
+    ServerAlias example2.com
+    ErrorLog /var/www/example2.com/error.log
     CustomLog /var/www/example2.com/requests.log combined </VirtualHost>
 ```
 ## Habilitar los Archivos
 
 ```bash
-sudo ln -s /etc/httpd/sites-available/example.com.conf /etc/httpd/sites-enabled/example.com.conf 
+sudo ln -s /etc/httpd/sites-available/example.com.conf /etc/httpd/sites-enabled/example.com.conf
 sudo ln -s /etc/httpd/sites-available/example2.com.conf /etc/httpd/sites-enabled/example2.com.conf
 ```
 
@@ -132,9 +132,9 @@ sudo vi /etc/hosts
 Agregar algo semejante a lo siguiente:
 
 ```bash
-127.0.0.1         localhost 
-127.0.1.1         guest-desktop 
-server_ip_address example.com 
+127.0.0.1         localhost
+127.0.1.1         guest-desktop
+server_ip_address example.com
 server_ip_address example2.com
 ```
 

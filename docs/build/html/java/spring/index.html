@@ -36,8 +36,8 @@
               href="../../genindex.html"/>
         <link rel="search" title="Búsqueda" href="../../search.html"/>
     <link rel="top" title="documentación de Base de conocimientos - 0.1" href="../../index.html"/>
-        <link rel="next" title="Spring Data Reference" href="spring-data-reference.html"/>
-        <link rel="prev" title="JHipster Domain Language (JDL)" href="../jhipster/jdl.html"/> 
+        <link rel="next" title="Spring Data Reference" href="spring-data-jpa-reference.html"/>
+        <link rel="prev" title="Documentación del Proyecto Angular 1.5.8 con Spring Boot" href="../jhipster/arquitectura-angular-spring-boot.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -90,7 +90,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">General:</span></p>
+              <p class="caption"><span class="caption-text">General</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../description.html">Descripción</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../getting-started.html">Primeros pasos</a></li>
@@ -104,8 +104,12 @@
 <p class="caption"><span class="caption-text">Java</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../jhipster/index.html">JHipster</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spring-data-reference.html">Spring Data Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spring-data-jpa-reference.html">Spring Data Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spring-data.html">Spring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maven/maven-guidelines.html">Líneamiento - Maven</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/cer-config.html">Instalar certificado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config/cer-config.html#update">Update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arquitectura/componentes/plugins/mybatis/mybatis-gen-addon.html">Mybatis</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Arquitectura</span></p>
 <ul>
@@ -154,10 +158,29 @@
 <li class="toctree-l1"><a class="reference internal" href="../../linux/principios/tar-zip.html#utilizar-tar-con-xz">Utilizar tar con xz</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../linux/principios/tar-zip.html#utilizar-zip">Utilizar ZIP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../linux/principios/tar-zip.html#realizar-respaldo-del-sistema-linux-completo">Realizar respaldo del sistema LINUX - COMPLETO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../linux/dockers/resources.html">Recursos de inicialización</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../linux/admin/extend-vm.html">Extender LVM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../linux/admin/monitoring.html">Monitoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../linux/checklist/after-install.html">Lista de verificación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../linux/dockers/resources.html">Recursos de inicialización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../linux/linux-guideliness.html">Recomendaciones de la infraestructura</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Pruebas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pruebas/intro-cucumber.html">Introducción a BDD (Behaviour Driver Development) con Cucumber.</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SCM</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../scm/gitlab/creacion-line.html">Lineamiento para la creación de Repositorios en Gitlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scm/git/git-guidelines.html">Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scm/git/git-guidelines.html#modelo-de-desarrollo">Modelo de Desarrollo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scm/git/git-guidelines.html#rama-master">Rama Master</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scm/git/git-guidelines.html#rama-develop">Rama Develop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scm/git/git-guidelines.html#rama-feature">Rama Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scm/git/git-guidelines.html#rama-release">Rama Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scm/git/git-guidelines.html#rama-hotfixes">Rama Hotfixes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scm/git/git-guidelines.html#lineamientos-generales">Lineamientos Generales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scm/git/git-useful-commands.html">Reemplazar el branch principal Master con otro de otro branch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scm/dads/estructura.html">Estructura de carpetas para los proyectos de la DADS</a></li>
 </ul>
 
             
@@ -223,8 +246,73 @@
             
   <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="spring-data-reference.html">Spring Data Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spring-data.html">Spring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spring-data-jpa-reference.html">Spring Data Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spring-data-jpa-reference.html#dependencias">3. Dependencias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spring-data-jpa-reference.html#administracion-de-dependencias-con-spring-boot">3.1 Administración de dependencias con Spring Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spring-data-jpa-reference.html#el-framework-spring">3.2 El Framework Spring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spring-data-jpa-reference.html#trabajando-con-repositorios-spring-data">4. Trabajando con Repositorios Spring Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spring-data-jpa-reference.html#conceptos-basicos">4.1 Conceptos básicos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spring-data-jpa-reference.html#metodos-de-consulta">4.2 Métodos de consulta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spring-data-jpa-reference.html#definiendo-interfaces-de-repositorios">4.3 Definiendo interfaces de repositorios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spring-data-jpa-reference.html#definicion-de-grano-fino-de-repositorio">4.3.1 Definición de grano fino de repositorio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spring-data-jpa-reference.html#usando-repositorios-con-multiples-modulos-de-spring-data">4.3.2 Usando Repositorios con múltiples módulos de Spring Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spring-data-jpa-reference.html#definiendo-metodos-de-consulta">4.4 Definiendo métodos de consulta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spring-data-jpa-reference.html#estrategias-de-busqueda-de-consultas">4.4.1 Estrategias de búsqueda de consultas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spring-data-jpa-reference.html#creacion-de-queries">4.4.2 Creación de <em>queries</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="spring-data-jpa-reference.html#expresiones-de-propiedad">4.4.3 Expresiones de propiedad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spring-data-jpa-reference.html#manejo-de-parametros-especiales">4.4.4 Manejo de parámetros especiales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spring-data-jpa-reference.html#limitando-los-resultados-de-los-queries">4.4.5 Limitando los resultados de los <em>queries</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="spring-data-jpa-reference.html#streaming-de-resultados-de-queries">4.4.6 <em>Streaming</em> de resultados de <em>queries</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="spring-data-jpa-reference.html#resultados-de-queries-asincronos">4.4.7 Resultados de _queries _asíncronos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="spring-data.html">Spring Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spring-data.html#caracteristicas-de-spring-boot">Características de Spring Boot</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spring-data.html#trabajando-con-bases-de-datos-sql"><strong>29. Trabajando con bases de datos SQL</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="spring-data.html#configurar-una-fuente-de-datos"><strong>29.1 Configurar una Fuente de Datos</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="spring-data.html#soporte-de-bases-de-datos-embebidas">Soporte de Bases de Datos <em>Embebidas</em></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="spring-data.html#conexion-a-una-base-de-datos-de-produccion">Conexión a una base de datos de producción</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spring-data.html#conexion-a-una-fuente-de-datos-datasource-jndi">Conexión a una Fuente de Datos (DataSource) JNDI</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="spring-data.html#usando-jdbctemplate">29.2 Usando JdbcTemplate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spring-data.html#jpa-y-spring-data">29.3 JPA y 'Spring Data'</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="spring-data.html#clases-de-entidades">Clases de Entidades</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spring-data.html#repositorios-jpa-de-spring-data">Repositorios JPA de Spring Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spring-data.html#creando-y-tirando-bases-de-datos-jpa">Creando y tirando bases de datos JPA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spring-data.html#open-entitymanager-in-view">Open EntityManager in View</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spring-data.html#trabajando-con-tecnologias-nosql">30. Trabajando con tecnologías NoSQL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spring-data.html#redis">30.1 Redis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spring-data.html#mongodb">30.2 MongoDB</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="spring-data.html#conectando-a-una-base-de-datos-mongodb">Conectando a una base de datos MongoDB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spring-data.html#mongotemplate">MongoTemplate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spring-data.html#repositorios-mongodb-de-spring-data">Repositorios MongoDB de Spring Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spring-data.html#embedded-mongo">Embedded Mongo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="spring-data.html#neo4j">30.3 Neo4j</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spring-data.html#elasticsearch">30.6 Elasticsearch</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="spring-data.html#conectando-a-elasticsearch-usando-jest">Conectando a Elasticsearch usando Jest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spring-data.html#conectando-a-elasticsearch-usando-spring-data">Conectando a Elasticsearch usando Spring Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spring-data.html#repositorios-spring-data-elasticsearch">Repositorios Spring Data Elasticsearch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spring-data.html#almacenamiento-en-cache">31. Almacenamiento en caché</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spring-data.html#proveedores-de-cache-soportados">31.1 Proveedores de caché soportados</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 
@@ -238,10 +326,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="spring-data-reference.html" class="btn btn-neutral float-right" title="Spring Data Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="spring-data-jpa-reference.html" class="btn btn-neutral float-right" title="Spring Data Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../jhipster/jdl.html" class="btn btn-neutral" title="JHipster Domain Language (JDL)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../jhipster/arquitectura-angular-spring-boot.html" class="btn btn-neutral" title="Documentación del Proyecto Angular 1.5.8 con Spring Boot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

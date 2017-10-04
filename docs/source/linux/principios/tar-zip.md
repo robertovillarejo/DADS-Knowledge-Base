@@ -1,6 +1,8 @@
+# tar-zip
+
 > **Autor** : INFOTEC - DADS
 
-# tar con gzip
+## tar con gzip
 
 **Comprimir**
 ```shell
@@ -18,7 +20,7 @@ tar tzvf compressed.tar.gz
 tar xzvf compressed.tar.gz
 ```
 
-# tar with bzip2
+## tar with bzip2
 
 **Comprimir**
 
@@ -37,7 +39,7 @@ tar tjvf bzipcompressed.tar.bz2
 tar xjvf bzipcompressed.tar.bz2
 ```
 
-# Utilizar tar con xz
+## Utilizar tar con xz
 
 **Comprimir**
 
@@ -56,7 +58,7 @@ tar tJvf xzcompressed.tar.xz
 ```shell
 tar xJvf xzcompressed.tar.xz
 ```
-# Utilizar ZIP
+## Utilizar ZIP
 
 **Comprimir**
 
@@ -74,7 +76,7 @@ less archivename
 unzip -l abc.zip
 ```
 
-# Realizar respaldo del sistema LINUX - COMPLETO
+## Realizar respaldo del sistema LINUX - COMPLETO
 
 Colocarse en **/** como usuario **root**
 

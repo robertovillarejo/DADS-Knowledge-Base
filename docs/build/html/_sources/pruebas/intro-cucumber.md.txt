@@ -1,7 +1,7 @@
+# Introducción a BDD (Behaviour Driver Development) con Cucumber.
+
 > **Autor** : Ivan Rodrigo Nievez Mondragon  
 > **Correo**: ivan.nievez@infotec.mx
-
-# Introducción a BDD (Behaviour Driver Development) con Cucumber.
 
 #### ¿Qué es BDD?
 *BDD* es un proceso de desarrollo software, si bien se relaciona principalmente con el Testing, que es de donde surge, trata de combinar los elementos técnicos y los de negocio, de manera que tengamos un marco de trabajo, y un marco de pruebas, en el que los requisitos de negocio formen parte del proceso de desarrollo, escribiendo primero las pruebsa y desde ahí, el desarrollo.

@@ -1,26 +1,28 @@
-# Introducción
-
-Los lineamietos expuestos aquí son una extensión de [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model)
-
-## Propósito
-
-Explicar el modelo de desarrollo y control de versión de código de los sistemas desarrollados en la **DADS** con la herramienta **Git**.
-
-## Alcance
-
-El presente lineamiento tiene por alcance describir las políticas y lineamientos de trabajo que deberá de seguir un equipo de desarrollo de software dentro de la **DADS** y que esté utilizando la herramienta para la administración y versionamiento de código Git. Los conceptos, procesos, comandos y otros elementos que pertenecen propiamente a la tecnología **Git** están fuera del alcance del presente documento.
-
-## Panorama
-
-El documento está compuesto por dos secciones: Modelo de Desarrollo y Descripción de Ramas. En la primera se explica el modelo general que utilizan los equipos de desarrollo de software dentro de la **DADS**, conceptos generales y consideraciones que se deben de tomar en cuenta para ejecutar de manera adecuada el modelo de desarrollo. En la segunda sección se describen las ramas empleadas para cubrir el ciclo de desarrollo de un sistema de software, sus políticas y reglas que la gobiernan, así como también las prácticas recomendadas de uso.
-
-# Modelo de Desarrollo
+# Directrices Git
 
 ## Introducción
 
+Los lineamietos expuestos aquí son una extensión de [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model)
+
+### Propósito
+
+Explicar el modelo de desarrollo y control de versión de código de los sistemas desarrollados en la **DADS** con la herramienta **Git**.
+
+### Alcance
+
+El presente lineamiento tiene por alcance describir las políticas y lineamientos de trabajo que deberá de seguir un equipo de desarrollo de software dentro de la **DADS** y que esté utilizando la herramienta para la administración y versionamiento de código Git. Los conceptos, procesos, comandos y otros elementos que pertenecen propiamente a la tecnología **Git** están fuera del alcance del presente documento.
+
+### Panorama
+
+El documento está compuesto por dos secciones: Modelo de Desarrollo y Descripción de Ramas. En la primera se explica el modelo general que utilizan los equipos de desarrollo de software dentro de la **DADS**, conceptos generales y consideraciones que se deben de tomar en cuenta para ejecutar de manera adecuada el modelo de desarrollo. En la segunda sección se describen las ramas empleadas para cubrir el ciclo de desarrollo de un sistema de software, sus políticas y reglas que la gobiernan, así como también las prácticas recomendadas de uso.
+
+## Modelo de Desarrollo
+
+### Introducción
+
 El modelo de desarrollo explicado aquí puede variar de acuerdo a las necesidades específicas de cada proyecto, sin embargo el modelo general de desarrollo considera diferentes flujos trabajo que pueden adaptarse a las necesidades específicas. El modelo definido aquí aplica sólo para equipos que se encuentren gestionando su código con la herramienta **Git**.
 
-## Elementos del Modelo de Desarrollo
+### Elementos del Modelo de Desarrollo
 
 El modelo consta de la definición de los siguientes elementos:
 
@@ -28,7 +30,7 @@ El modelo consta de la definición de los siguientes elementos:
 2. Actividades
 3. Ramas principales
 
-## Roles
+### Roles
 
 El modelo de desarrollo involucra dos roles; **Master** y **Developer**, mismos que se describen a continuación:
 
@@ -50,13 +52,13 @@ El modelo de desarrollo involucra dos roles; **Master** y **Developer**, mismos 
 >
 > 3. Participar en las tareas de integración cuando estas sean solicitadas por el rol master.
 
-## Actividades
+### Actividades
 
 Las actividades que se llevan a cabo en el modelo de desarrollo se ilustran en la siguiente gráfica:
 
 ![](img/diagram.png)
 
-## Meta Información para cada Rama
+### Meta Información para cada Rama
 
 Con la finalidad de comprender de manera precisa el estudio de las diferentes ramas de trabajo utilizados en la **DADS**, a continuación se presenta la descripción de la meta-información que define a cada una de las ramas y que será utilizado a lo largo de este documento para describirla.
 
@@ -70,9 +72,9 @@ Con la finalidad de comprender de manera precisa el estudio de las diferentes ra
 | Diagrama | Diagrama explicativo sobre el uso de la rama. |
 | Comandos | Comandos sugeridos para la creación, modificación, unión y eliminación de la rama. |
 
-# Rama Master
+## Rama Master
 
-### Descripción
+#### Descripción
 
 La rama **master, **por convención, será la rama principal del proyecto. En esta rama se encuentran las versiones productivas del sistema y  que se han liberado a producción.
 
@@ -88,64 +90,64 @@ La rama **master, **por convención, será la rama principal del proyecto. En es
 
 Esta rama **siempre** se llama `master`
 
-### Lineamientos
+#### Lineamientos
 
 1. No está permitido subir “código roto” a la rama master.
 2. El código que se suba a master deberá de ser cuidadosamente probado antes de ser integrado; se sugiere utilizar el branch _release_ antes de que una nueva liberación se lleve a cabo a la rama **master**.
 3. Sólo el **rol master** puede ejecutar la operación de `push/merge`  a esta rama.
 4. Esta rama **nunca** se deberá de borrar.
 
-### Diagrama
+#### Diagrama
 
 ![](img/branch-develop.png)
 
-### Comandos
+#### Comandos
 
 `[NO APLICA]`
 
-# Rama Develop
+## Rama Develop
 
-### Descripción
+#### Descripción
 
 La rama **develop**, por convención, será la rama secundaria del proyecto. En esta rama, el equipo de desarrollo se encuentra trabajando día con día una nueva versión del sistema.
 
-### Rama de la que bifurca
+#### Rama de la que bifurca
 
 `master`
 
-### Rama con la que se une
+#### Rama con la que se une
 
 `master`
 
-### Convención de nombrado
+#### Convención de nombrado
 
 Siempre se llamará `develop`
 
-### Lineamientos
+#### Lineamientos
 
-### Diagrama
+#### Diagrama
 
 ![](img/branch-develop.png)
 
-### Comandos
+#### Comandos
 
 `[NO APLICA]`
 
-# Rama Feature
+## Rama Feature
 
-### Descripción
+#### Descripción
 
 La rama de características “**feature**” es utilizada para desarrollar nuevas características o funcionalidades que vendrán en las próximas o futuras entregas. Esta rama se crea cuando se comienza a desarrollar una nueva característica de la cual se desconoce la fecha de entrega. La esencia de esta rama es que exista durante el periodo de tiempo en que tome desarrollar la nueva característica. Eventualmente, esta rama se unirá a la rama de desarrollo **develop** \(para agregar de manera definitiva la nueva característica en la próxima entrega\) o se eliminará \(en caso de que la nueva característica no cumpla con los objetivos deseados\).
 
-### Rama de la que bifurca
+#### Rama de la que bifurca
 
 `develop`
 
-### Rama con la que se une
+#### Rama con la que se une
 
 `develop`
 
-### Convención de nombrado
+#### Convención de nombrado
 
 El nombrado de esta rama se deberá de apegar a lo establecido en \[AGIS\] y la propuesta en esta sección:
 
@@ -156,15 +158,15 @@ Ejemplo:
 * feature-seguridad
 * feature-carrusel
 
-### Lineamientos
+#### Lineamientos
 
 1. Sólo existe en el repositorio local, nunca en el remoto **origin**
 
-### Diagrama
+#### Diagrama
 
 ![](img/branch-features.png)
 
-### Comandos
+#### Comandos
 
 Crear una rama `feature` a partir de la rama `develop` se deberá de hacer lo siguiente:
 
@@ -196,22 +198,22 @@ Finalmente, se envian los cambios a la rama remota `develop`
 git push origin develop
 ```
 
-# Rama Release
+## Rama Release
 
-### Descripción
+#### Descripción
 
 La rama “**release**” se debe utilizar para la preparación de una nueva entrega en el ambiente de producción. Esta  rama es útil para corregir pequeños defectos y preparar los metadatos que deberá llevar la próxima entrega \(número de versión, fecha de compilación, etc.\). El beneficio de tener una rama de entrega **release** radica en el hecho de que podemos conservar la rama **develop** limpia y lista para recibir nuevas versiones que se tendrán que integrar a la rama **master**. Adicionalmente, la rama **release** será utilizada por el equipo de **QA** para probar la entrega antes de que esta llegue a producción.
 
-### Rama de la que bifurca
+#### Rama de la que bifurca
 
 `develop`
 
-### Rama con la que se une
+#### Rama con la que se une
 
 * `develop`
 * `master`
 
-### Convención de nombrado
+#### Convención de nombrado
 
 El nombrado de esta rama se deberá de apegar a lo establecido en \[AGIS\] y la propuesta en esta sección:
 
@@ -222,7 +224,7 @@ Ejemplo:
 * `release-seguridad`
 * `release-carrusel`
 
-### Lineamientos
+#### Lineamientos
 
 1. El mejor momento para crear una ramificación de develop es cuando el desarrollo refleja el estado deseado de una nueva entrega.
 
@@ -231,11 +233,11 @@ Ejemplo:
 3. Es exactamente al comienzo de la creación de esta rama en que se asigna una versión. Es hasta ese momento que la rama develop refleja los cambios para la siguiente entrega, pero no es claro si esa nueva entrega eventualmente se convertirá en la versión 0.3 o 1.0. La notación para el versionamiento de código es la descrita en **\[\*\***SEMANTIC2.0\]\*\*
 
 
-### Diagrama
+#### Diagrama
 
 ![](img/branch-hotfixes.png)
 
-### Comandos
+#### Comandos
 
 Creación de la rama de entrega `release-1.2`
 
@@ -273,22 +275,22 @@ Enviar los cambios a la rama develop
 git tag –a 1.2
 ```
 
-# Rama Hotfixes
+## Rama Hotfixes
 
-### Descripción
+#### Descripción
 
 Una vez que se ha llevado a cabo una liberación a la rama `master` y esta versión forma parte del ambiente productivo del cliente, es posible que exista el reporte de nuevos `bugs` encontrados por los usuarios finales. Para corregir estos `bugs` y desplegar una nueva versión en el ambiente productivo, es que se utilizará la rama `hotfixe`,  que ayudará a corregir errores que surgan en el ambiente de producción.
 
-### Rama de la que bifurca
+#### Rama de la que bifurca
 
 `master`
 
-### Rama con la que se une
+#### Rama con la que se une
 
 `master`
 `develop`
 
-### Convención de nombrado
+#### Convención de nombrado
 
 hotfix-\[modulo-version\]
 
@@ -297,7 +299,7 @@ Ejemplo:
 * `hotfix-seguridad-v1.1.1`
 * `hotfix-carrusel-v1.1.1`
 
-### Lineamientos
+#### Lineamientos
 
 1. La rama `hotfixes` sólo existe mientras se está corriguiendo errores.
 2. La rama `hotfixes` existe en el repositorio remoto.
@@ -308,13 +310,13 @@ Si existe una rama release cuando ocurre un bug en producción, entonces:
 
 1. Los **bugs** corregidos en la rama `hotfix` se deberán de unir a la rama `release` y no a `develop`; la unión con `develop` ocurre cuando la rama `release` está lista para producción. Si el trabajo en la rama `develop` requiere de manera inmediata el cambio realizado en la rama `hotfix`, entonces se puede lleva a cabo la operación **merge** dentro de la rama `develop`;
 
-### Diagrama
+#### Diagrama
 
 ![](img/branch-hotfixes.png)
 
-### Comandos
+#### Comandos
 
-## Crear una rama `hotfix`
+### Crear una rama `hotfix`
 
 Las ramas hotfix son creados desde la rama master. Por ejemplo, si la versión que se liberó a producción fue la `1.2.0`, y se detectan errores durante el uso del sistema y los cambios en la rama `develop` no son estables, entonces se pude crear una rama `hotfix` para atender los bugs y volver a liberar a producción.
 
@@ -356,9 +358,9 @@ Eliminación de la rama temporal:
 git branch -d hotfix-1.2.1
 ```
 
-# Lineamientos Generales
+## Lineamientos Generales
 
-## Generales
+### Generales
 
 En general, siempre hay que considerar los siguientes elementos:
 
@@ -369,7 +371,7 @@ En general, siempre hay que considerar los siguientes elementos:
 * Siempre prueba tu código una y otra vez.
 * Los proyectos no deberán de ser creados por los integrantes del repositorio gitlab, únicamente el administrador será el único facultado en llevar a cabo este tipo de acciones.
 
-## Particulares
+### Particulares
 
 Los siguiente lineamientos aplican a todas la ramas:
 
@@ -382,7 +384,7 @@ Los siguiente lineamientos aplican a todas la ramas:
 * Generar respaldos de la base de datos **Git** en una base mensual.
 * No estará permitido efectuar bloqueos, a menos que esto sea justificado plenamente.
 
-## Importantes
+### Importantes
 
 Existen dos cosas que nunca se deberá de llevar a cabo en **Git**:
 

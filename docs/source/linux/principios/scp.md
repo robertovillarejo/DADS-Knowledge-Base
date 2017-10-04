@@ -1,6 +1,6 @@
-> **Autor** : INFOTEC - DADS
-
 # SCP
+
+> **Autor** : INFOTEC - DADS
 
 ## Para Archivos
 
@@ -29,4 +29,3 @@ $ scp -r foo your_username@remotehost.edu:/some/remote/directory/bar
 ## Otros usos
 
 [SCP](http://www.hypexr.org/linux_scp_help.php)
-

@@ -1,5 +1,4 @@
-Instalación de Tomcat
-=====================
+# Instalación de Tomcat
 
 ### Actualización de paquetes
 

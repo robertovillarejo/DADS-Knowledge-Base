@@ -1,7 +1,7 @@
-#### Mostrar la interfaces de Red
+# Mostrar la interfaces de Red
 
 ```bash
-#IP 
+#IP
 ip link show
 ip a
 
@@ -11,5 +11,3 @@ netstat -i
 #Ifconfig
 ifconfig -a
 ```
-
-
