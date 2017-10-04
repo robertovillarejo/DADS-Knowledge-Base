@@ -1,3 +1,6 @@
+SCM
+===
+
 .. toctree::
   :maxdepth: 1
 

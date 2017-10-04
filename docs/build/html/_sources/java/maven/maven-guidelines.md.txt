@@ -1,8 +1,3 @@
----
-search:
-    keywords: ['mvn', 'maven', 'lineamiento']
----
-
 # Líneamiento - Maven
 
 ## Líneamiento para GrouId, ArtifactId y Version

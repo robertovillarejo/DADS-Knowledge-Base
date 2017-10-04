@@ -40,7 +40,7 @@ Si quieres usar JHipster UML en lugar del sub-generador import-jdl necesitas ins
 Luego puedes usar archivos JDL para generar entidades:
 
 * Simplemente crea un archivo con la extensión '.jh' o '.jdl'
-* Declara tus entidades y relaciones o créalas y descárgalas con [JDL-Studio.](http://www.jhipster.tech/jdl-studio/) 
+* Declara tus entidades y relaciones o créalas y descárgalas con [JDL-Studio.](http://www.jhipster.tech/jdl-studio/)
 * En la carpeta raíz de tu aplicación JHipster, ejecuta jhipster import-jdl mi_archivo.jdl o jhipster-uml mi\_archivo.jdl_
 
 y Voilà, !terminaste!
@@ -463,7 +463,7 @@ entity A {
 
 ### Anexos
 
-Aquí los tipos soportados por JDL:
+Aquí los tipos soportados por JDL:  
 
 | SQL | MongoDB | Cassandra | Validaciones |
 | :--- | :--- | :--- | :--- |
@@ -485,6 +485,7 @@ Aquí los tipos soportados por JDL:
 | TextBlob | TextBlob |  | required, minbytes, maxbytes |
 | Instant | Instant | Instant | required |
 
+
 ### Issues y bugs
 
 JDL está disponible en Github y sigue las mismas líneas de contribución que JHipster.
@@ -498,6 +499,3 @@ Cuando envíes algo, debes ser lo más preciso posible:
 
 * **Cada issue publicado debe tener solamente un problema **\(o una petición/pregunta\)
 * Los Pull Requests son bienvenidos pero los _commits _deben ser 'atómicos' para ser realmente comprensibles.
-
-
-

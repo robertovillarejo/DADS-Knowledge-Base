@@ -12,18 +12,14 @@
 
    description
    license
-   contributing
+   contributing/index
    about-developer
 
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 2
   :caption: Java
 
-  java/jhipster/index
-  java/spring/index
-  java/maven/maven-guidelines
-  java/config/cer-config
-  java/arquitectura/componentes/plugins/mybatis/mybatis-gen-addon
+  java/index
 
 .. toctree::
   :maxdepth: 1
