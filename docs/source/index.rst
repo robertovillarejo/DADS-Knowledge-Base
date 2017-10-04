@@ -12,41 +12,10 @@
 
    description
    license
-   contributing/index
    about-developer
 
 .. toctree::
   :maxdepth: 2
-  :caption: Java
+  :caption: JHipster
 
-  java/index
-
-.. toctree::
-  :maxdepth: 1
-  :caption: Arquitectura
-
-  arquitectura/index
-
-.. toctree::
-  :maxdepth: 2
-  :caption: Angular
-
-  angular/index
-
-.. toctree::
-  :maxdepth: 1
-  :caption: Linux
-
-  linux/index
-
-.. toctree::
-  :maxdepth: 1
-  :caption: Pruebas
-
-  pruebas/intro-cucumber
-
-.. toctree::
-  :maxdepth: 1
-  :caption: SCM
-
-  scm/index
+  jhipster/index

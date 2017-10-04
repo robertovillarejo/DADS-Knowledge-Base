@@ -1,0 +1,306 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Creando un servicio &mdash; documentación de Base de conocimientos - 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Búsqueda" href="../search.html"/>
+    <link rel="top" title="documentación de Base de conocimientos - 0.1" href="../index.html"/>
+        <link rel="up" title="JHipster" href="index.html"/>
+        <link rel="next" title="Usando DTO&#39;s [BETA]" href="creando-dtos.html"/>
+        <link rel="prev" title="Creando una entidad" href="creando-una-entidad.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Base de conocimientos
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../description.html">Descripción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">Licencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about-developer.html">Sobre el Desarrollador</a></li>
+</ul>
+<p class="caption"><span class="caption-text">JHipster</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">JHipster</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tareas-basicas-jhipster.html">Tareas básicas de JHipster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creando-una-entidad.html">Creando una entidad</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Creando un servicio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduccion">Introducción</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#por-que-las-clases-de-servicio-no-las-genera-el-generador-entity">¿Por qué las clases de Servicio no las genera el generador &quot;entity&quot;?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deberiamos-usar-interfaces-para-nuestros-beans-de-servicio">¿Deberíamos usar interfaces para nuestros Beans de Servicio?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#por-que-deberia-usar-transacciones-para-recuperar-relaciones-jpa-lazy">¿Por qué debería usar transacciones para recuperar relaciones JPA <em>lazy</em>?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#podemos-anadir-seguridad-a-los-beans-de-servicio">¿Podemos añadir seguridad a los Beans de Servicio?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#podemos-monitorear-los-beans-de-servicio">¿Podemos monitorear los Beans de Servicio?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="creando-dtos.html">Usando DTO's [BETA]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="administrando-relaciones.html">Administrando relaciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internacionalizacion.html">Internacionalización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actualizando-una-aplicacion.html">Actualizando una aplicación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jdl.html">JHipster Domain Language (JDL)</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Base de conocimientos</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">JHipster</a> &raquo;</li>
+        
+      <li>Creando un servicio</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/jhipster/creando-un-servicio.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creando-un-servicio">
+<span id="creando-un-servicio"></span><h1>Creando un servicio<a class="headerlink" href="#creando-un-servicio" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="introduccion">
+<span id="introduccion"></span><h2>Introducción<a class="headerlink" href="#introduccion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Comparado con el sub-generador &quot;entity&quot;, éste es un sub-generador muy simple.</p>
+<p>Su objetivo es generar un bean de Servicio de Spring, en el que se supone que se codifique la lógica de negocio de tu aplicación.</p>
+<p>Para generar un bean de Servicio &quot;Bar&quot;, simplemente escribe:</p>
+<p>jhipster service Bar</p>
+<p>Esto generará un simple &quot;BarService&quot;: muy pocas líneas de código, pero generalmente surgen  varias preguntas. A continuación tratamos de responder las preguntas más comunes.</p>
+</div>
+<div class="section" id="por-que-las-clases-de-servicio-no-las-genera-el-generador-entity">
+<span id="por-que-las-clases-de-servicio-no-las-genera-el-generador-entity"></span><h2>¿Por qué las clases de Servicio no las genera el generador &quot;entity&quot;?<a class="headerlink" href="#por-que-las-clases-de-servicio-no-las-genera-el-generador-entity" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Aquí tenemos dos principios de arquitectura principales:</p>
+<ul class="simple">
+<li>No queremos promover la creación de Servicios sin uso: si todo lo que necesitas es un CRUD básico sobre tu base de datos, no necesitas un bean de Servicio. Es por eso que, por defecto, JHipster no los genera.</li>
+<li>Creemos que un bean de servicio es menos granular que un repositorio. Un bean de Servicio usa varios repositorios para proporcionar valor de negocio sobre ellos. Es por eso que los beans de Servicio no pueden generarse con las Entidades.</li>
+</ul>
+</div>
+<div class="section" id="deberiamos-usar-interfaces-para-nuestros-beans-de-servicio">
+<span id="deberiamos-usar-interfaces-para-nuestros-beans-de-servicio"></span><h2>¿Deberíamos usar interfaces para nuestros Beans de Servicio?<a class="headerlink" href="#deberiamos-usar-interfaces-para-nuestros-beans-de-servicio" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Repuesta corta: <strong>No</strong></p>
+<p>Si deseas la respuesta larga, aquí está:</p>
+<p>Uno de los principales intereses de usar Spring es AOP (Aspect Oriented Programming: Programación Orientada a Aspectos). Esta tecnología permite que Spring añada nuevos comportamientos sobre tus Beans:  así es cómo funcionan las transacciones o la seguridad, por ejemplo.</p>
+<p>A fin de añadir tales comportamientos, Spring necesita crear un proxy sobre tu clase y hay dos maneras de crear un proxy.</p>
+<ul class="simple">
+<li>Si tu clase usa una interfaz, Spring usará un mecanismo estándar proporcionado por Java para crear un proxy dinámico.</li>
+<li>Si tu clase no usa un interfaz, Spring usará CGLIB para generar una nueva clase _al vuelo: _no es un mecanismo estándar de Java, pero funciona también como el mecanismo estándar.</li>
+</ul>
+<p>Algunas personas dirán que las interfaces son mejores para escribir pruebas, pero creemos que no deberíamos modificar nuestro código para hacer pruebas y que todos esos nuevos <em>frameworks</em> de maquetado (como <em>EasyMock</em>) te permiten crear buenas pruebas unitarias sin ninguna interfaz.</p>
+<p>Así que, al final, encontramos que las interfaces para tus beans de Servicio son en su mayoría inútiles, y es por eso que no las recomendamos (!aunque te dejamos la opción para generarlas!).</p>
+</div>
+<div class="section" id="por-que-deberia-usar-transacciones-para-recuperar-relaciones-jpa-lazy">
+<span id="por-que-deberia-usar-transacciones-para-recuperar-relaciones-jpa-lazy"></span><h2>¿Por qué debería usar transacciones para recuperar relaciones JPA <em>lazy</em>?<a class="headerlink" href="#por-que-deberia-usar-transacciones-para-recuperar-relaciones-jpa-lazy" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Por defecto JPA utiliza inicialización <em>lazy</em> de las relaciones _uno-a-muchos _y <em>muchos-a-muchos</em>. Si quieres usar esta configuración por defecto, probablemente verás la temida LazyInitializationException: significa que trataste de usar una relación sin inicializar fuera de una transacción.</p>
+<p>Como la clase de Servicio generada tiene por defecto la anotación &#64;Transactional, todos sus métodos son transaccionales. Esto significa que puedes obtener todas la relación <em>lazy</em> requerida dentro de esos métodos de negocio, sin ninguna LazyInitializationException.</p>
+<p>Tip: usa &#64;Transactional(readOnly=true) en un método si no estás modificando ningún dato. Éste es una buena optimización de rendimiento (Hibernate no necesita hacer <em>flush</em> de su caché de primer nivel, porque no estamos modificando nada), así como una mejora de calidad son algunos drivers JDBC (Oracle no permite enviar sentencias INSERT/UPDATE/DELETE).</p>
+</div>
+<div class="section" id="podemos-anadir-seguridad-a-los-beans-de-servicio">
+<span id="podemos-anadir-seguridad-a-los-beans-de-servicio"></span><h2>¿Podemos añadir seguridad a los Beans de Servicio?<a class="headerlink" href="#podemos-anadir-seguridad-a-los-beans-de-servicio" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>!Sí! Solo añade la anotación &#64;Secured de Spring Security en tu clase o en tus métodos y usa la clase Authorities Constants proporcionada para restringir el acceso a autoridades específicas de usuario.</p>
+</div>
+<div class="section" id="podemos-monitorear-los-beans-de-servicio">
+<span id="podemos-monitorear-los-beans-de-servicio"></span><h2>¿Podemos monitorear los Beans de Servicio?<a class="headerlink" href="#podemos-monitorear-los-beans-de-servicio" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>!Sí! Solo añade las anotaciones de Métricas &#64;Timed en los métodos que quieres monitorear.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="creando-dtos.html" class="btn btn-neutral float-right" title="Usando DTO&#39;s [BETA]" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="creando-una-entidad.html" class="btn btn-neutral" title="Creando una entidad" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, DADS Infotec.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

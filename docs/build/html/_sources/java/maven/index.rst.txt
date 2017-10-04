@@ -1,6 +1,0 @@
-Maven
----------------
-
-.. toctree::
-
-   maven-guidelines

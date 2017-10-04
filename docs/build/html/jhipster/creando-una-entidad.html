@@ -1,0 +1,476 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Creando una entidad &mdash; documentación de Base de conocimientos - 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Búsqueda" href="../search.html"/>
+    <link rel="top" title="documentación de Base de conocimientos - 0.1" href="../index.html"/>
+        <link rel="up" title="JHipster" href="index.html"/>
+        <link rel="next" title="Creando un servicio" href="creando-un-servicio.html"/>
+        <link rel="prev" title="Tareas básicas de JHipster" href="tareas-basicas-jhipster.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Base de conocimientos
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../description.html">Descripción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">Licencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about-developer.html">Sobre el Desarrollador</a></li>
+</ul>
+<p class="caption"><span class="caption-text">JHipster</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">JHipster</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tareas-basicas-jhipster.html">Tareas básicas de JHipster</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Creando una entidad</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduccion">Introducción</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jhipster-uml-y-jdl-studio">JHipster UML y JDL Studio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#campos-de-entidades">Campos de entidades</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tipos-de-campos">Tipos de campos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#validacion">Validación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#relaciones-de-entidades">Relaciones de entidades</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#objetos-de-transferencia-de-datos-dtos">Objetos de Transferencia de Datos (DTOs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filtrado">Filtrado</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#paginacion">Paginación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#actualizando-una-entidad-existente">Actualizando una entidad existente</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tutorial">Tutorial</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#generar-la-entidad-author">Generar la entidad &quot;Author&quot;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#genera-la-entidad-book">Genera la entidad &quot;Book&quot;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#revisa-el-codigo-generado">Revisa el código generado</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mejora-el-codigo-generado">Mejora el código generado</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#terminaste">!Terminaste!</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="creando-un-servicio.html">Creando un servicio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creando-dtos.html">Usando DTO's [BETA]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="administrando-relaciones.html">Administrando relaciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internacionalizacion.html">Internacionalización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actualizando-una-aplicacion.html">Actualizando una aplicación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jdl.html">JHipster Domain Language (JDL)</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Base de conocimientos</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">JHipster</a> &raquo;</li>
+        
+      <li>Creando una entidad</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/jhipster/creando-una-entidad.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creando-una-entidad">
+<span id="creando-una-entidad"></span><h1>Creando una entidad<a class="headerlink" href="#creando-una-entidad" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><em>Por favor revisa nuestro <em><a class="reference external" href="http://www.jhipster.tech/video-tutorial/"><em>video tutorial</em></a></em> sobre cómo crear una nueva aplicación JHipster!</em></p>
+<p><strong>Importante:</strong> si quieres tener recarga en vivo (&quot;live reload&quot;) de tu código JavaScript/TypeScript, necesitarás ejecutar gulp (para JavaScript/AngularJS 1) o yarn start (para TypeScript/Angular 2+). Para más información puedes visitar la página Utilizando JHipster en desarrollo.</p>
+<div class="section" id="introduccion">
+<span id="introduccion"></span><h2>Introducción<a class="headerlink" href="#introduccion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Una vez creada tu aplicación, querrás crear <em>entities</em>. Por ejemplo, quizás quieras crear las entidades <em>Author _y _Book</em>. Para cada entidad, necesitarás:</p>
+<ul class="simple">
+<li>Una tabla en la base de datos</li>
+<li>Un <em>change set</em> de Liquibase</li>
+<li>Una entidad JPA</li>
+<li>Un Repositorio JPA de Spring Data</li>
+<li>Un Controlador REST de Spring MVC, el cual tiene las operaciones básicas <em>CRUD</em>.</li>
+<li>Un <em>router</em>, un componente y un servicio de Angular.</li>
+<li>Una vista HTML</li>
+<li>Pruebas de integración, para validar que todo funciona como se espera</li>
+<li>Pruebas de rendimiento, para ver que todo funciona bien.</li>
+</ul>
+<p>Si tienes varias entidades, probablemente desees tener relaciones entre ellas. Para esto necesitarás:</p>
+<ul class="simple">
+<li>Una llave foránea en la base de datos</li>
+<li>Código JavaScript y HTML específico  para administrar esta relación.</li>
+</ul>
+<p>El sub-generador de &quot;entidad&quot; creará todos los archivos necesarios y proporcionará un CRUD _front-end _ para cada entidad (consulta la <a class="reference external" href="http://www.jhipster.tech/using-angularjs/">estructura del proyecto</a>). El sub generador se puede invocar ejecutando <code class="docutils literal"><span class="pre">jhipster</span> <span class="pre">entity</span> <span class="pre">&lt;entityName&gt;</span> <span class="pre">--[options]</span></code>. La referencia para estas opciones se encuentra escribiendo <code class="docutils literal"><span class="pre">jhipster</span> <span class="pre">entity</span> <span class="pre">--help</span></code>.</p>
+<p>A continuación se muestran las opciones soportadas:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">--table-name</span> <span class="pre">&lt;table_name&gt;</span></code> - Por defecto JHipster generará un nombre de tabla basado en el nombre de tu entidad, si quieres tener un nombre de tabla diferente puedes hacerlo pasando esta opción.</li>
+<li><code class="docutils literal"><span class="pre">--angular-suffix</span> <span class="pre">&lt;suffix&gt;</span></code> - Si quieres que todas tus rutas de Angular tengan un sufijo personalizado puedes pasarlo usando esta opción.</li>
+<li><code class="docutils literal"><span class="pre">--regenerate</span></code> - Regenera una entidad existente sin hacer ninguna pregunta.</li>
+<li><code class="docutils literal"><span class="pre">--skip-server</span></code> - Omite el código del lado del servidor y genera solo el códigodel lado del cliente</li>
+<li><code class="docutils literal"><span class="pre">--skip-client</span></code> - Omite el código del lado del cliente y genera solo el código del lado del servidor</li>
+<li><code class="docutils literal"><span class="pre">--db</span></code> - Especifica la base de datos cuando se omite la generación del lado del servidor, en otro caso no tiene efecto.</li>
+</ul>
+</div>
+<div class="section" id="jhipster-uml-y-jdl-studio">
+<span id="jhipster-uml-y-jdl-studio"></span><h2>JHipster UML y JDL Studio<a class="headerlink" href="#jhipster-uml-y-jdl-studio" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Esta página describe cómo crear entidades con JHipster utilizando la interfaz estándar de línea de comandos. Si deseas crear muchas entidades, quizás prefieras usar una herramienta gráfica.</p>
+<p>En ese caso, hay dos opciones:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.jhipster.tech/jhipster-uml/">JHipster UML</a>, el cual te permite usar un editor UML.</li>
+<li><a class="reference external" href="http://www.jhipster.tech/jdl-studio/">JDL Studio</a>, nuestra herramienta <em>online</em> para crear entidades y relaciones usando nuestro lenguaje de dominio específico <a class="reference external" href="http://www.jhipster.tech/jdl/">JDL</a>.</li>
+</ul>
+<p>Si usas el JDL Studio:</p>
+<ul class="simple">
+<li>Puedes generar entidades a partir de un archivo JDL usando el sub-generador <code class="docutils literal"><span class="pre">import-jdl</span></code>, ejecutando <code class="docutils literal"><span class="pre">jhipster</span> <span class="pre">import-jdl</span> <span class="pre">tu-archivo-jdl.jh</span></code>.<ul>
+<li>Si no quieres regenerar tus entidades, durante la importación del JDL, puedes usar la bandera<code class="docutils literal"><span class="pre">--json-only</span></code> para omitir la creación de entidades y crear solamente los archivos json en la carpeta .jhipster.</li>
+<li>Por defecto <code class="docutils literal"><span class="pre">import-jdl</span></code> regenera solamente entidades que han cambiado, si deseas que todas tus entidades se regeneren entonces pasa la bandera <code class="docutils literal"><span class="pre">--force</span></code>. Por favor nota que esto sobreescribirá todos tus cambios locales a los archivos de las entidades.</li>
+</ul>
+</li>
+<li>Si deseas usar JHipster UML en lugar del sub-generador <code class="docutils literal"><span class="pre">import-jdl</span></code>, necesitas instalarlo ejecutando <code class="docutils literal"><span class="pre">npm</span> <span class="pre">install</span> <span class="pre">-g</span> <span class="pre">jhipster-uml</span></code>, y enseguida ejecutar <code class="docutils literal"><span class="pre">jhipster-uml</span> <span class="pre">elNombreDeTuArchivo.jh</span></code></li>
+</ul>
+</div>
+<div class="section" id="campos-de-entidades">
+<span id="campos-de-entidades"></span><h2>Campos de entidades<a class="headerlink" href="#campos-de-entidades" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para cada entidad, puedes agregar tantos campos como desees. Necesitarás introducir los nombres de los campos y sus tipos y JHipster generará por ti todo el código y la configuración requerida, desde la vista HTML hasta el _changelog _de Liquibase.</p>
+<p>Tales campos no pueden contener palabras reservadas de las tecnologías que estás utilizando. Por ejemplo, si usas MySQL:</p>
+<ul class="simple">
+<li>No puedes usar las palabras reservadas de Java (puesto que tu código no compilará)</li>
+<li>No puedes usar palabras reservadas de MySQL (ya que fallará la actualización del esquema de tu base de datos).</li>
+</ul>
+</div>
+<div class="section" id="tipos-de-campos">
+<span id="tipos-de-campos"></span><h2>Tipos de campos<a class="headerlink" href="#tipos-de-campos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>JHipster soporta varios tipos de campo. Este soporte depende de la base de datos de tu <em>backend</em>, por lo tanto utilizamos tipos de Java para describirlos: un String Java se almacena diferente en Oracle o Cassandra, y una de las fortalezas de JHipster es generar por ti el código correcto para acceder a la base de datos.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">String</span></code>: Un String de Java. Su tamaño por defecto depende del <em>backend</em> que se utilice (si usas JPA, es por defecto de 255), pero también puedes cambiarlo usando regla de validación (poniendo un tamaño máximo <code class="docutils literal"><span class="pre">max</span></code>de 1024, por ejemplo).</li>
+<li><code class="docutils literal"><span class="pre">Integer</span></code>: Un entero de Java.</li>
+<li><code class="docutils literal"><span class="pre">Long</span></code>: Un _long _ de Java.</li>
+<li><code class="docutils literal"><span class="pre">Float</span></code>: Un flotante de Java.</li>
+<li><code class="docutils literal"><span class="pre">Double</span></code>: Un doble de Java.</li>
+<li><code class="docutils literal"><span class="pre">BigDecimal</span></code>: Un objecto <em>java.math.BigDecimal</em>, se usa cuando quieres cálculos matemáticos exactos (con frecuencia se usa para operaciones financieras).</li>
+<li><code class="docutils literal"><span class="pre">LocalDate</span></code>: Un objecto <em>java.time.LocalDate</em>, se usa para manejar correctamente las fechas en Java.</li>
+<li><code class="docutils literal"><span class="pre">Instant</span></code>: Un objeto <em>java.time.Instant</em>, se usa para representar un <em>timestamp</em>, un punto instantáneo en la línea de tiempo.</li>
+<li><code class="docutils literal"><span class="pre">ZonedDateTime</span></code>: Un objeto <em>java.time.ZonedDateTime</em>, se usa para representar una fecha y tiempo local en una determinada _timezone _(normalmente para una reunión calendarizada). Nota que las <em>time zones</em> no son soportadas por las capas REST ni de persistencia por lo tanto probablemente deberías usar en su lugar <code class="docutils literal"><span class="pre">Instant</span></code>la mayoría de las veces.</li>
+<li><code class="docutils literal"><span class="pre">Boolean</span></code>: Un Booleano Java.</li>
+<li><code class="docutils literal"><span class="pre">Enumeration</span></code>: Un objecto Enum de Java. Cuando se selecciona este tipo, el sub-generador te preguntará cuáles valores deseas en tu enumeración y creará una clase enum específica para almacenarlos.</li>
+<li><code class="docutils literal"><span class="pre">Blob</span></code>: Un objeto Blob, se usa para almacenar algunos datos binarios. Cuando se selecciona este tipo, el sub-generador te preguntará si deseas almacenar datos binarios genéricos, un objeto imagen o un CLOB (text largo). Las imágenes se manejan específicamente del lado de Angular, así que se puede mostrar al usuario final.</li>
+</ul>
+</div>
+<div class="section" id="validacion">
+<span id="validacion"></span><h2>Validación<a class="headerlink" href="#validacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Se puede configurar la validación para cada campo. Dependiendo del tipo de campo, estarán disponible diferentes opciones de validación.</p>
+<p>La validación será generada automáticamente en:</p>
+<ul class="simple">
+<li>las vistas HTML, usando el mecanismo de validación de AngularJS</li>
+<li>los objetos  de dominio de Java, usando Bean Validation.</li>
+</ul>
+<p>La validación de Beans (Bean Validation) se usará para validar automáticamente objetos de dominio cuando se usen en:</p>
+<ul class="simple">
+<li>Controladores Spring MVC REST (usando la anotación  <code class="docutils literal"><span class="pre">&#64;Valid</span></code>)</li>
+<li>Hibernate/JPA (las entidades se validarán automáticamente antes de guardarse)</li>
+</ul>
+<p>La información de validación también se usará para generar metadatos más precisos de las columnas de la base de datos.</p>
+<ul class="simple">
+<li>Los campos requeridos se marcarán como no nulos</li>
+<li>Los campos que tienen una longitud máxima tendrán el mismo tamaño de columna.</li>
+</ul>
+<p>La validación tiene algunas limitaciones:</p>
+<ul class="simple">
+<li>No soportamos todas las opciones de validación de AngularJS y Bean Validation, sino que solo soportamos a aquellos que se encuentran en ambas APIs.</li>
+<li>Los patrones de expresiones regulares no funcionan igual en JavaScript que en Java, así que si configuras uno, podrías necesitar modificar uno de los patrones generados.</li>
+<li>JHipster genera pruebas unitarias que funcionan para entidades genéricas, sin conocer tus reglas de validación: es posible que las pruebas generadas no pasen las reglas de validación. En ese caso, necesitarás actualizar los valores de muestra para tus pruebas unitarias, para que pasen las reglas de validación.</li>
+</ul>
+</div>
+<div class="section" id="relaciones-de-entidades">
+<span id="relaciones-de-entidades"></span><h2>Relaciones de entidades<a class="headerlink" href="#relaciones-de-entidades" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Las relaciones de entidades solo están disponible para bases de datos SQL. Es un tema bastante complejo, el cual tiene su propia página de documentación: <a class="reference external" href="http://www.jhipster.tech/managing-relationships/">Manejando relaciones</a>.</p>
+</div>
+<div class="section" id="objetos-de-transferencia-de-datos-dtos">
+<span id="objetos-de-transferencia-de-datos-dtos"></span><h2>Objetos de Transferencia de Datos (DTOs)<a class="headerlink" href="#objetos-de-transferencia-de-datos-dtos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Por defecto las entidades de JHipster no utilizan DTOs, pero están disponible como una opción. Aquí la documentación: <a class="reference external" href="http://www.jhipster.tech/using-dtos/">Usando DTOs</a>.</p>
+</div>
+<div class="section" id="filtrado">
+<span id="filtrado"></span><h2>Filtrado<a class="headerlink" href="#filtrado" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Opcionalmente, las entidades almacenadas en bases de datos SQL se pueden filtrar usando JPA. Aquí ladocumentación: <a class="reference external" href="http://www.jhipster.tech/entities-filtering/">Filtrando tus entidades</a>.</p>
+</div>
+<div class="section" id="paginacion">
+<span id="paginacion"></span><h2>Paginación<a class="headerlink" href="#paginacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Por favor nota que la paginación no está disponible si creaste tu aplicación con Cassandra. Por supuesto que se añadirá esta característica en una futura versión.</p>
+<p>La paginación utiliza el <a class="reference external" href="http://tools.ietf.org/html/rfc5988">Link header</a>, como en la <a class="reference external" href="https://developer.github.com/v3/#pagination">API de Github</a>. JHipster proporciona una implementación personalizada de esta especificación tanto en el servidor (Spring MVC REST) como en el cliente (Angular JS).</p>
+<p>Cuando se genera la entidad, JHipster proporciona 4 opciones de paginación:</p>
+<ul class="simple">
+<li>Sin paginación (en ese caso, no se pagina el <em>back-end</em>).</li>
+<li>Un paginador simple, basado en el <a class="reference external" href="http://getbootstrap.com/components/#pagination-pager">Bootstrap pager</a>.</li>
+<li>Un sistema completo de paginación, basado en el <a class="reference external" href="http://getbootstrap.com/components/#pagination">componente de paginación de Bootstrap</a>.</li>
+<li>Un sistema de scroll infinito, basado en la <a class="reference external" href="http://sroze.github.io/ngInfiniteScroll/">directiva de scroll infinito</a>.</li>
+</ul>
+</div>
+<div class="section" id="actualizando-una-entidad-existente">
+<span id="actualizando-una-entidad-existente"></span><h2>Actualizando una entidad existente<a class="headerlink" href="#actualizando-una-entidad-existente" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La configuración de entidad se guarda en un archivo <code class="docutils literal"><span class="pre">.json</span></code> específico, en el directorio de JHipster. De tal modo que si ejecutas el sub-generador de nuevo, usando un nombre de entidad, puedes actualizar o regenerar la entidad.</p>
+<p>Cuando ejecutas el sub-generador de entidades para una entidad existente, se te hará  una pregunta ¿Deseas actualizar la entidad? Esto reemplazará los archivos existentes para esta entidad, todo tu código personalizado será sobreescrito con las siguientes opciones:</p>
+<ul class="simple">
+<li>Sí, regenera la entidad - Esto simplemente regenera tu entidad. Tip: Se puede forzar pasando una bandera <code class="docutils literal"><span class="pre">--regenerate</span></code> cuando ejecutas el sub-generador.</li>
+<li>Si, agrega más campos y relaciones - Esto te presentará preguntas para añadir más campos y relaciones.</li>
+<li>Sí, quita campos y relaciones - Se te presentarán preguntas para eliminar de la entidad campos existentes.</li>
+<li>No, salir - Saldrá del sub-generador sin cambio alguno.</li>
+</ul>
+<p>Quizá desees actualizar tu entidad por alguna de estas razones:</p>
+<ul class="simple">
+<li>Quieres añadir/eliminar campos y relaciones a una entidad existente</li>
+<li>Quieres resetear el código de tu entidad a su estado original</li>
+<li>Actualizaste JHipster y te gustaría tener tu entidad generada con las nuevas plantillas</li>
+<li>Modificaste el archivo de configuración <code class="docutils literal"><span class="pre">.json</span></code> (el formato es muy parecido a las preguntas hechas por el generador, así que no es muy complicado), por lo tanto tienes una nueva versión de la entidad.</li>
+<li>Has copiado/pegado el archivo <code class="docutils literal"><span class="pre">.json</span></code> y quieres una nueva entidad que sea muy similar a la entidad copiada.</li>
+</ul>
+<p>Tip: para regenerar todas tus entidades de una sola vez, puedes usar los siguientes comandos (quita la bandera <code class="docutils literal"><span class="pre">--force</span></code> para que se muestren las preguntas cuando los archivos hayan cambiado).</p>
+<ul class="simple">
+<li>Linux &amp; Mac: <code class="docutils literal"><span class="pre">for</span> <span class="pre">f</span> <span class="pre">in</span> <span class="pre">`ls</span> <span class="pre">.jhipster`;</span> <span class="pre">do</span> <span class="pre">jhipster</span> <span class="pre">entity</span> <span class="pre">${f%.*}</span> <span class="pre">--force</span> <span class="pre">;</span> <span class="pre">done</span></code></li>
+<li>Windows: <code class="docutils literal"><span class="pre">for</span> <span class="pre">%f</span> <span class="pre">in</span> <span class="pre">(.jhipster/*)</span> <span class="pre">do</span> <span class="pre">jhipster</span> <span class="pre">entity</span> <span class="pre">%~nf</span> <span class="pre">--force</span></code></li>
+</ul>
+</div>
+<div class="section" id="tutorial">
+<span id="tutorial"></span><h2>Tutorial<a class="headerlink" href="#tutorial" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Éste es un pequeño tutorial sobre cómo crear dos entidades (un <em>Author</em> y un <em>Book</em>) que tienen una relación <em>uno-a-muchos</em>.</p>
+<p><strong>Importante:</strong> si quieres tener recarga en vivo (&quot;live reload&quot;) de tu código JavaScript/TypeScript, necesitarás ejecutar gulp (para JavaScript/AngularJS 1) o yarn start (para TypeScript/Angular 2+). Para más información puedes visitar la página Utilizando JHipster en desarrollo.</p>
+<div class="section" id="generar-la-entidad-author">
+<span id="generar-la-entidad-author"></span><h3>Generar la entidad &quot;Author&quot;<a class="headerlink" href="#generar-la-entidad-author" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Como deseamos tener una relación entre Authors y Books (un autor puede escribir varios libros), necesitamos crear primero al Author. A nivel de base de datos, JHipster será capaz de agregar una clave foránea en la tabla Book, que enlace a la tabla Author.</p>
+<p>jhipster entity author</p>
+<p>Responde las siguientes preguntas acerca de los campos de esta entidad, el autor tiene:</p>
+<ul class="simple">
+<li>un &quot;name&quot; del tipo &quot;String&quot;</li>
+<li>un &quot;birthDate&quot; del tipo &quot;LocalDate&quot;</li>
+</ul>
+<p>Después responde las preguntas relacionadas a las relaciones, el autor tiene:</p>
+<ul class="simple">
+<li>Una relación <em>uno-a-muchos</em> con la entidad &quot;book&quot; (la cual aún no existe)</li>
+</ul>
+</div>
+<div class="section" id="genera-la-entidad-book">
+<span id="genera-la-entidad-book"></span><h3>Genera la entidad &quot;Book&quot;<a class="headerlink" href="#genera-la-entidad-book" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>jhipster entity book</p>
+<p>Responde las preguntas siguientes relacionadas a los campos de esta entidad, el libro tiene:</p>
+<ul class="simple">
+<li>un &quot;title&quot; del tipo &quot;String&quot;</li>
+<li>una &quot;description&quot; del tipo &quot;String&quot;</li>
+<li>una &quot;publicationDate&quot;, del tipo &quot;LocalDate&quot;</li>
+<li>un &quot;price&quot;, del tipo &quot;BigDecimal&quot;</li>
+</ul>
+<p>Después responde las preguntas relacionadas a las relaciones, el libro:</p>
+<ul class="simple">
+<li>Tiene una relación <em>muchos-a-uno</em> con la entidad &quot;author&quot;</li>
+<li>Y esta relación utiliza el campo &quot;nombre&quot; (de la entidad Author&quot;) para mostrarse</li>
+</ul>
+</div>
+<div class="section" id="revisa-el-codigo-generado">
+<span id="revisa-el-codigo-generado"></span><h3>Revisa el código generado<a class="headerlink" href="#revisa-el-codigo-generado" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Ejecuta la suite de pruebas generadas, con mvn test, la cual probará la entidad Author y Book.</p>
+<p>Lanza la aplicación (por ejemplo con mvn), inicia sesión y selecciona las entidades &quot;Author&quot; y &quot;Book&quot; en el menú &quot;entidades&quot;.</p>
+<p>Revisa las tablas de la base de datos, para ver que tus datos se insertaron correctamente.</p>
+</div>
+<div class="section" id="mejora-el-codigo-generado">
+<span id="mejora-el-codigo-generado"></span><h3>Mejora el código generado<a class="headerlink" href="#mejora-el-codigo-generado" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Los archivos generados contienen todas las operaciones básicas CRUD y no necesitan modificarse si tus necesidades son simples.</p>
+<p>Si deseas modificar el código generado o el esquema de base de datos, deberías seguir nuestra <a class="reference external" href="http://www.jhipster.tech/development/">guía de desarrollo</a>.</p>
+<p>Si deseas algunos comportamientos de negocio más complejos, tal vez necesitas añadir una clase &#64;Service de Spring, usando el sub-generador de servicios.</p>
+</div>
+<div class="section" id="terminaste">
+<span id="terminaste"></span><h3>!Terminaste!<a class="headerlink" href="#terminaste" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Tu página CRUD generada debe verse algo así:<img alt="" src="http://www.jhipster.tech/images/screenshot_5.png" /></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="creando-un-servicio.html" class="btn btn-neutral float-right" title="Creando un servicio" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tareas-basicas-jhipster.html" class="btn btn-neutral" title="Tareas básicas de JHipster" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, DADS Infotec.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
