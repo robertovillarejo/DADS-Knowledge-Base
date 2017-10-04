@@ -1,0 +1,464 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tareas básicas de JHipster &mdash; documentación de Base de conocimientos - 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../../genindex.html"/>
+        <link rel="search" title="Búsqueda" href="../../search.html"/>
+    <link rel="top" title="documentación de Base de conocimientos - 0.1" href="../../index.html"/>
+        <link rel="up" title="JHipster" href="index.html"/>
+        <link rel="next" title="Creando una entidad" href="creando-una-entidad.html"/>
+        <link rel="prev" title="JHipster" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Base de conocimientos
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../description.html">Descripción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Licencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about-developer.html">Sobre el Desarrollador</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Java</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Java</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../spring/index.html">Spring: documentación en español</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">JHipster</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Tareas básicas de JHipster</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creando-una-aplicacion">Creando una aplicación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inicio-rapido">Inicio rápido</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#preguntas-que-hace-el-generador">Preguntas que hace el generador</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#opciones-de-linea-de-comandos">Opciones de línea de comandos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="creando-una-entidad.html">Creando una entidad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creando-un-servicio.html">Creando un servicio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creando-dtos.html">Usando DTO's [BETA]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="administrando-relaciones.html">Administrando relaciones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="internacionalizacion.html">Internacionalización</a></li>
+<li class="toctree-l3"><a class="reference internal" href="actualizando-una-aplicacion.html">Actualizando una aplicación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jdl.html">JHipster Domain Language (JDL)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../maven/index.html">Maven</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Arquitectura</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../arquitectura/index.html">Arquitectura</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../linux/index.html">Linux</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Base de conocimientos</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Java</a> &raquo;</li>
+        
+          <li><a href="index.html">JHipster</a> &raquo;</li>
+        
+      <li>Tareas básicas de JHipster</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/java/jhipster/tareas-basicas-jhipster.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tareas-basicas-de-jhipster">
+<span id="tareas-basicas-de-jhipster"></span><h1>Tareas básicas de JHipster<a class="headerlink" href="#tareas-basicas-de-jhipster" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="creando-una-aplicacion">
+<span id="creando-una-aplicacion"></span><h2>Creando una aplicación<a class="headerlink" href="#creando-una-aplicacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Por favor revisa nuestro video tutorial sobre cómo crear una nueva aplicación de JHipster!</p>
+<ol class="simple">
+<li>Inicio rápido</li>
+<li>Preguntas que te hace al generar una aplicación</li>
+<li>Opciones de línea de comandos</li>
+<li>Tips</li>
+</ol>
+</div>
+<div class="section" id="inicio-rapido">
+<span id="inicio-rapido"></span><h2>Inicio rápido<a class="headerlink" href="#inicio-rapido" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Antes que nada, crea un directorio vacío en el que se creará la aplicación:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>mkdir myapplication
+</pre></div>
+</div>
+<p>Entra a ese directorio</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span> myapplication/
+</pre></div>
+</div>
+<p>Para generar tu aplicación, escribe:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>jhipster
+</pre></div>
+</div>
+<p>Responde las preguntas que hace el generador para crear una aplicación que se ajuste a tus necesidades. Esas opciones se describen en la siguiente sección.</p>
+<p>Una vez que se generó la aplicación, puedes iniciarla utilizando Maven (<code class="docutils literal"><span class="pre">./mvnw</span></code> en Linux/MacOS/Windows PowerShell, <code class="docutils literal"><span class="pre">mvnw</span></code> en Windows Cmd) o Gradle (<code class="docutils literal"><span class="pre">./gradle</span></code> en Linux/MacOS/Windows PowerShell, <code class="docutils literal"><span class="pre">gradle</span></code> en Windows Cmd).</p>
+<p>La aplicación estará disponible en <a class="reference external" href="http://localhost:8080">http://localhost:8080</a></p>
+<p><strong>Importante:</strong> si quieres tener recarga en vivo (&quot;live reload&quot;) de tu código JavaScript/TypeScript, necesitarás ejecutar gulp (para JavaScript/AngularJS 1) o yarn start (para TypeScript/Angular 2+). Para más información puedes visitar la página Utilizando JHipster en desarrollo.</p>
+</div>
+<div class="section" id="preguntas-que-hace-el-generador">
+<span id="preguntas-que-hace-el-generador"></span><h2>Preguntas que hace el generador<a class="headerlink" href="#preguntas-que-hace-el-generador" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Algunas preguntas cambian dependiendo de las opciones previas que eliges. Por ejemplo, no necesitarás configurar el caché de Hibernate si no seleccionaste una base de datos SQL.</p>
+<div class="section" id="que-tipo-de-aplicacion-te-gustaria-crear">
+<span id="que-tipo-de-aplicacion-te-gustaria-crear"></span><h3>¿Qué tipo de aplicación te gustaría crear?<a class="headerlink" href="#que-tipo-de-aplicacion-te-gustaria-crear" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El tipo de tu aplicación depende de si deseas utilizar una arquitectura de microservicios o no. Encuentra <a class="reference external" href="http://www.jhipster.tech/microservices-architecture/">aquí </a>una explicación completa sobre microservicios, si no estás segura utiliza la opción por defecto &quot;Monolithic application&quot; (Aplicación monolítica).</p>
+<p>Puedes usar:</p>
+<ul class="simple">
+<li>_Monolithic application _(Aplicación monolítica): es un clásico, una aplicación 'unitalla'. Es más fácil usar y desarrollar y es nuestra recomendación por defecto.</li>
+<li>_Microservice application _(Aplicación de microservicio): en una arquitectura de microservicios, éste es el único de los servicios.</li>
+<li><em>Microservice gateway</em> (Gateway de microservicio): en una arquitectura de microservicios, éste es un servidor perimetral que 'rutea' y protege las peticiones.</li>
+<li>JHipster UAA server [BETA]: en una arquitectura de microservicios, éste es un servidor de autenticación OAuth2 que protege a los microservicios. Para más información consulta la <a class="reference external" href="http://www.jhipster.tech/using-uaa/">documentación JHipster UAA</a>.</li>
+</ul>
+</div>
+<div class="section" id="cual-es-el-nombre-base-de-tu-aplicacion">
+<span id="cual-es-el-nombre-base-de-tu-aplicacion"></span><h3>¿Cuál es el nombre base de tu aplicación?<a class="headerlink" href="#cual-es-el-nombre-base-de-tu-aplicacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Éste es el nombre de tu aplicación.</p>
+</div>
+<div class="section" id="cual-es-el-nombre-del-paquete-por-defecto-de-tu-aplicacion">
+<span id="cual-es-el-nombre-del-paquete-por-defecto-de-tu-aplicacion"></span><h3>¿Cuál es el nombre del paquete por defecto de tu aplicación?<a class="headerlink" href="#cual-es-el-nombre-del-paquete-por-defecto-de-tu-aplicacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Tu aplicación Java usará éste como el paquete raíz. Este valor lo almacena Yeoman así que la próxima vez que ejecutes el generador el último valor se convertirá en el valor por defecto. Por supuesto que puedes sobre-escribirlo proporcionando un nuevo valor.</p>
+</div>
+<div class="section" id="deseas-usar-el-jhipster-registry-para-configurar-monitorear-y-escalar-tu-aplicacion">
+<span id="deseas-usar-el-jhipster-registry-para-configurar-monitorear-y-escalar-tu-aplicacion"></span><h3>¿Deseas usar el JHipster Registry para configurar, monitorear y escalar tu aplicación?<a class="headerlink" href="#deseas-usar-el-jhipster-registry-para-configurar-monitorear-y-escalar-tu-aplicacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El JHipster Registry es una herramienta de código abierto que se usa para administrar tu aplicación en tiempo de ejecución.</p>
+<p>Es requerida cuando se usa una arquitectura de microservicios (ésta es la razón por la que esta pregunta se hace solo cuando se genera una aplicación monolítica).</p>
+</div>
+<div class="section" id="que-tipo-de-autenticacion-te-gustaria-usar">
+<span id="que-tipo-de-autenticacion-te-gustaria-usar"></span><h3>¿Qué tipo de autenticación te gustaría usar?<a class="headerlink" href="#que-tipo-de-autenticacion-te-gustaria-usar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Esta pregunta no se hace cuando seleccionas el JHipster Registry, ya que requiere el uso de la autenticación por JWT.</p>
+<p>Puedes usar:</p>
+<ul class="simple">
+<li>JSON Web Token (JWT), es la opción por defecto</li>
+<li>Un mecanismo clásico de autenticación basada en sesión, como estamos acostumbrados a hacerlo en Java (así es como la mayoría de la gente usa Spring Security). Puedes usar esta opción con Spring Social, el cual te permitirá usar el &quot;social login&quot; (como Google, Facebook, Twitter): éste se configura mediante el soporte de Spring Social de Spring Boot.</li>
+<li>Un mecanismo de autenticación OAuth2.0 (JHipster proporciona el código del servidor OAuth2 necesario y las tablas de bases de datos).</li>
+</ul>
+<p>Los enfoques OAuth2.0 y JWT permiten utilizar una arquitectura de aplicación (<em>stateless</em>) 'sin estado' (éstos no se basan en la sesión HTTP). Puedes encontrar más información en la página de <a class="reference external" href="http://www.jhipster.tech/security/">protegiendo tu aplicación</a>.</p>
+</div>
+<div class="section" id="que-tipo-de-base-de-datos-te-gustaria-utilizar">
+<span id="que-tipo-de-base-de-datos-te-gustaria-utilizar"></span><h3>¿Qué tipo de base de datos te gustaría utilizar?<a class="headerlink" href="#que-tipo-de-base-de-datos-te-gustaria-utilizar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Puedes elegir entre:</p>
+<ul class="simple">
+<li>Ninguna base de datos (sólo disponible cuando se usa una aplicación de microservicio).</li>
+<li>Una base de datos SQL (H2, MySQL, MariaDB, PostgreSQL, MSSQL, Oracle), la cual accederás con Spring Data JPA.</li>
+<li>MongoDB</li>
+<li>Cassandra</li>
+</ul>
+</div>
+<div class="section" id="cual-base-de-datos-te-gustaria-utilizar-para-produccion">
+<span id="cual-base-de-datos-te-gustaria-utilizar-para-produccion"></span><h3>¿Cuál base de datos te gustaría utilizar para producción?<a class="headerlink" href="#cual-base-de-datos-te-gustaria-utilizar-para-produccion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Ésta es la base de datos que usará tu perfil de &quot;producción&quot;. Para configurarlo, por favor modifica tu archivo <code class="docutils literal"><span class="pre">src/main/resources/config/application-prod.yml</span></code>.</p>
+<p>Si deseas usar Oracle, necesitarás instalar manualmente el driver JDBC de Oracle.</p>
+</div>
+<div class="section" id="cual-base-de-datos-te-gustaria-utilizar-para-desarrollo">
+<span id="cual-base-de-datos-te-gustaria-utilizar-para-desarrollo"></span><h3>¿Cuál base de datos te gustaría utilizar para desarrollo?<a class="headerlink" href="#cual-base-de-datos-te-gustaria-utilizar-para-desarrollo" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Ésta es la base de datos que utilizarás con tu perfil de &quot;desarrollo&quot;. Puedes usar:</p>
+<ul class="simple">
+<li>H2, corriendo en memoria. Ésta es la manera más fácil de usar JHipster pero tus datos se perderán cuando reinices el servidor.</li>
+<li>H2, con datos almacenados en disco. Actualmente se encuentra en prueba BETA (y no funciona en Windows), pero eventualmente sería una mejor opción que el H2 corriendo en memoria, de esta manera no perderás tus datos cuando la aplicación se reinicie.</li>
+<li>La misma base de datos que elegiste para producción: es un poco más complicada de configurar pero al final sería mejor trabajar en la misma base de datos que usarás en producción. También es la mejor manera de usar liquibase-hibernate como se describe en la <a class="reference external" href="http://www.jhipster.tech/development/">guía de desarrollo.</a></li>
+</ul>
+<p>Para configurarla, por favor modifica tu archivo <code class="docutils literal"><span class="pre">src/main/resources/config/application-dev.yml</span></code>.</p>
+</div>
+<div class="section" id="deseas-usar-cache-de-segundo-nivel-de-hibernate">
+<span id="deseas-usar-cache-de-segundo-nivel-de-hibernate"></span><h3>¿Deseas usar caché de segundo nivel de Hibernate?<a class="headerlink" href="#deseas-usar-cache-de-segundo-nivel-de-hibernate" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Hibernate es el proveedor JPA que usa JHipster. Por razones de rendimiento, recomendamos encarecidamente que uses un caché y que lo ajustes de acuerdo a tus necesidades. Si eliges hacerlo, puedes usar también ehcache (caché local) o Hazelcast (caché distribuido, para uso en un ambiente de clúster).</p>
+</div>
+<div class="section" id="te-gustaria-usar-maven-o-gradle">
+<span id="te-gustaria-usar-maven-o-gradle"></span><h3>¿Te gustaría usar Maven o Gradle?<a class="headerlink" href="#te-gustaria-usar-maven-o-gradle" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Puedes construir tu aplicación de Java generada ya sea con Maven o con Gradle. Maven es más estable y más maduro. Gradle es más flexible, fácil de extender y más <em>hype</em>.</p>
+</div>
+<div class="section" id="que-otras-tecnologias-te-gustaria-usar">
+<span id="que-otras-tecnologias-te-gustaria-usar"></span><h3>¿Qué otras tecnologías te gustaría usar?<a class="headerlink" href="#que-otras-tecnologias-te-gustaria-usar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Ésta es una pregunta multi-respuesta, para agregar una o más tecnologías a la aplicación. Las tecnologías disponibles son:</p>
+<div class="section" id="social-login-google-facebook-twitter">
+<span id="social-login-google-facebook-twitter"></span><h4><strong>Social login (Google, Facebook, Twitter)</strong><a class="headerlink" href="#social-login-google-facebook-twitter" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Esta opción solo se encuentra disponible si seleccionaste una base de datos SQL o una base de datos MongoDB. Añade soporte de Spring Social a JHipster, de esta manera los usuarios finales se pueden autenticar utilizando su cuenta de Google, Facebook o Twitter.</p>
+</div>
+<div class="section" id="api-first-development-utilizando-swagger-codegen">
+<span id="api-first-development-utilizando-swagger-codegen"></span><h4><em>API first development</em> utilizando swagger-codegen<a class="headerlink" href="#api-first-development-utilizando-swagger-codegen" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Esta opción te permite hacer un <em>API first development _para tu aplicación integrando _Swagger-Codegen</em> en el _build _(en este tipo de desarrollo, en lugar de generar la documentación a partir del código, necesitas escribir primero la especificación y luego generar código a partir de ésta).</p>
+</div>
+<div class="section" id="motor-de-busqueda-usando-elasticsearch">
+<span id="motor-de-busqueda-usando-elasticsearch"></span><h4>Motor de búsqueda usando Elasticsearch<a class="headerlink" href="#motor-de-busqueda-usando-elasticsearch" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Elasticsearch se configura utilizando Spring Data ElasticSearch. Encuentra más información en nuestra <a class="reference external" href="http://www.jhipster.tech/using-elasticsearch/">guía de Elasticsearch</a>.</p>
+</div>
+<div class="section" id="sesiones-http-en-cluster-utilizando-hazelcast">
+<span id="sesiones-http-en-cluster-utilizando-hazelcast"></span><h4>Sesiones HTTP en clúster utilizando Hazelcast<a class="headerlink" href="#sesiones-http-en-cluster-utilizando-hazelcast" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Por defecto, JHipster utiliza sesiones HTTP solo para almacenar información de autenticación y autorización de Spring Security. Por supuesto, puedes elegir poner más datos en tus sesiones HTTP. El uso de sesiones HTTP provocará problemas si estás ejecutando en un clúster, especialmente si no utilizas un balanceador de cargas con &quot;sticky sessions&quot;. Si deseas replicar tus sesiones dentro de un clúster, elige esta opción para tener configurado Hazelcast.</p>
+</div>
+<div class="section" id="websockets-usando-spring-websocket">
+<span id="websockets-usando-spring-websocket"></span><h4>WebSockets usando Spring Websocket<a class="headerlink" href="#websockets-usando-spring-websocket" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Los websockets se pueden habilitar usando Spring Websocket. También proporcionamos una muestra completa para mostrarte cómo usar el framework de manera eficiente.</p>
+</div>
+<div class="section" id="mensajes-asincronos-usando-apache-kafka">
+<span id="mensajes-asincronos-usando-apache-kafka"></span><h4>Mensajes asíncronos usando Apache Kafka<a class="headerlink" href="#mensajes-asincronos-usando-apache-kafka" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Usa Apache Kafka como un agente de mensajes de publicación/suscripción.</p>
+</div>
+</div>
+<div class="section" id="cual-framework-te-gustaria-utilizar-para-el-cliente">
+<span id="cual-framework-te-gustaria-utilizar-para-el-cliente"></span><h3>¿Cuál <em>Framework</em> te gustaría utilizar para el cliente?<a class="headerlink" href="#cual-framework-te-gustaria-utilizar-para-el-cliente" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El <em>framework</em> para usar del lado del cliente.</p>
+<p>Puedes usar:</p>
+<ul class="simple">
+<li>Angular versión 4+</li>
+<li>AngularJS versión 1.x (próximamente será obsoleto)</li>
+</ul>
+</div>
+<div class="section" id="te-gustaria-utilizar-el-pre-procesador-de-hojas-de-estilo-libsass-para-tus-css">
+<span id="te-gustaria-utilizar-el-pre-procesador-de-hojas-de-estilo-libsass-para-tus-css"></span><h3>¿Te gustaría utilizar el pre-procesador de hojas de estilo <em>LibSass</em> para tus CSS?<a class="headerlink" href="#te-gustaria-utilizar-el-pre-procesador-de-hojas-de-estilo-libsass-para-tus-css" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Node-Sass es una magnífica solución para simplificar el diseño CSS. Para usarla de manera eficiente, necesitas ejecutar un servidor Gulp, el cual será configurado automáticamente.</p>
+</div>
+<div class="section" id="te-gustaria-habilitar-el-soporte-de-internacionalizacion">
+<span id="te-gustaria-habilitar-el-soporte-de-internacionalizacion"></span><h3>¿Te gustaría habilitar el soporte de internacionalización?<a class="headerlink" href="#te-gustaria-habilitar-el-soporte-de-internacionalizacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Por defecto JHipster proporciona un excelente soporte de internacionalización. ya sea del lado del cliente o del servidor. Sin embargo, la internacionalización añade una pequeña carga, y es un poco más compleja de manejar, así que puedes elegir no instalar esta característica.</p>
+</div>
+<div class="section" id="cual-framework-de-pruebas-te-gustaria-utilizar">
+<span id="cual-framework-de-pruebas-te-gustaria-utilizar"></span><h3>¿Cuál <em>framework</em> de pruebas te gustaría utilizar?<a class="headerlink" href="#cual-framework-de-pruebas-te-gustaria-utilizar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Por defecto JHipster proporciona pruebas unitarias y de integración (usando el soporte de JUnit de Spring). Opcionalmente, también puedes añadir soporte para:</p>
+<ul class="simple">
+<li>Pruebas de rendimiento usando Gatling</li>
+<li>Pruebas de comportamiento usando Cucumber</li>
+<li>Pruebas de integración de Angular con Protractor</li>
+</ul>
+<p>Puedes encontrar más información en nuestra <a class="reference external" href="http://www.jhipster.tech/running-tests/">guía de Ejecución de pruebas.</a></p>
+</div>
+<div class="section" id="te-gustaria-instalar-otros-generadores-del-jhipster-marketplace">
+<span id="te-gustaria-instalar-otros-generadores-del-jhipster-marketplace"></span><h3>¿Te gustaría instalar otros generadores del JHipster Marketplace?<a class="headerlink" href="#te-gustaria-instalar-otros-generadores-del-jhipster-marketplace" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El JHipster Marketplace es donde puedes instalar módulos adicionales, escritos por otros desarrolladores, para añadir a tu proyecto características no oficiales.</p>
+</div>
+</div>
+<div class="section" id="opciones-de-linea-de-comandos">
+<span id="opciones-de-linea-de-comandos"></span><h2>Opciones de línea de comandos<a class="headerlink" href="#opciones-de-linea-de-comandos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>También puedes ejecutar JHipster con algunas opciones opcionales de línea de comandos. Puedes encontrar referencias de estas opciones escribiendo <code class="docutils literal"><span class="pre">jhipster</span> <span class="pre">app</span> <span class="pre">--help</span></code>.</p>
+<p>Éstas son las opciones que puedes pasar:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">--help</span></code> - Muestra las opciones del generador y el uso</li>
+<li><code class="docutils literal"><span class="pre">--skip-cache</span></code> - No recuerda las respuestas rápidas (Por defecto en <em>false</em>).</li>
+<li><code class="docutils literal"><span class="pre">--skip-install</span></code> - No instala dependencias de manera automática (Por defecto en <em>false</em>)</li>
+<li><code class="docutils literal"><span class="pre">--skip-client</span></code> - Omite la generación de la aplicación del lado del cliente (<em>front-end</em>), de esta manera solo se genera el código del <em>back-end</em> (Por defecto en <em>false</em>). Esto tiene el mismo efecto que ejecutar el sub-generador del servidor con jhipster server.</li>
+<li><code class="docutils literal"><span class="pre">--skip-server</span></code> - Omite la generación de la aplicación del lado del servidor, de esta manera solo se genera el código del lado del _front-end _(Por defecto en <em>false</em>). Esto tiene el mismo efecto que ejecutar el sub-generador del cliente con jhipster client.</li>
+<li><code class="docutils literal"><span class="pre">--skip-user-management</span></code> - Omite la generación de la administración de usuarios, tanto en el _front _ como en el <em>back-end</em>. (Por defecto en <em>false</em>).</li>
+<li><code class="docutils literal"><span class="pre">--i18n</span></code> - Habilita o deshabilita i18n durante la generación del <em>front-end</em>, en caso contrario no tiene efecto (Por defecto en <em>true</em>).</li>
+<li><code class="docutils literal"><span class="pre">--auth</span></code> - Especifica el tipo de autenticación cuando se omite la generación del <em>back-end</em>, en caso contrario no tiene efecto pero es requerido cuando se usa skip-server.</li>
+<li><code class="docutils literal"><span class="pre">--db</span></code> - Especifica la base de datos cuando se omite la generación del <em>back-end</em>, en otro caso no tiene efecto pero es obligatorio cuando se usa skip-server</li>
+<li><code class="docutils literal"><span class="pre">--with-entitites</span></code> - Regenera las entidades existentes si ya habían sido generadas (usando su configuración en la carpeta .jhipster) (Por defecto en <em>false</em>).</li>
+<li><code class="docutils literal"><span class="pre">--skip-checks</span></code> - Omite la revisión de las herramientas requeridas (Por defecto en <em>false</em>).</li>
+<li><code class="docutils literal"><span class="pre">--jhi-prefix</span></code> - Añade prefijos a los nombres de los servicios, componentes y estados/rutas (Por defecto: jhi).</li>
+<li><code class="docutils literal"><span class="pre">--npm</span></code> - Usa NPM en lugar de Yarn (Por defecto en <em>false</em>).</li>
+</ul>
+<blockquote>
+<div><p>Tips</p>
+<p>Si eres un usuario avanzado puedes utilizar nuestros sub-generadores de cliente y servidor ejecutando <code class="docutils literal"><span class="pre">jhipster</span> <span class="pre">client</span> <span class="pre">--[options]</span></code> y <code class="docutils literal"><span class="pre">jhipster</span> <span class="pre">server</span> <span class="pre">--[options]</span></code>. Para ver todas las opciones que se pueden usar ejecuta los subgeneradores anteriores con la bandera <code class="docutils literal"><span class="pre">--help</span></code>.</p>
+<p>También puedes usar las opciones de línea de comandos de Yeoman, como --force para sobre escribir automáticamente los archivos existentes. Si quieres regenerar tu aplicación completa, incluyendo sus entidades, puedes ejecutar <code class="docutils literal"><span class="pre">jhipster</span> <span class="pre">--force</span> <span class="pre">--with-entities</span></code>.</p>
+</div></blockquote>
+<div class="section" id="">
+<span id="id1"></span><h3><a class="headerlink" href="#" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="creando-una-entidad.html" class="btn btn-neutral float-right" title="Creando una entidad" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="JHipster" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, DADS Infotec.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

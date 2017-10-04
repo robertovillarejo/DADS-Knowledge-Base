@@ -1,5 +1,5 @@
-Linux: principios
-=================
+Principios de Linux
+===================
 
 .. toctree::
   :maxdepth: 2

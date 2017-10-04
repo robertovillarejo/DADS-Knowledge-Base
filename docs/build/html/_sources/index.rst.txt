@@ -16,15 +16,9 @@
 
 .. toctree::
   :maxdepth: 2
-  :caption: JHipster
+  :caption: Java
 
-  jhipster/index
-
-.. toctree::
-  :maxdepth: 2
-  :caption: Spring
-
-  spring/index
+  java/index
 
 .. toctree::
   :maxdepth: 2
