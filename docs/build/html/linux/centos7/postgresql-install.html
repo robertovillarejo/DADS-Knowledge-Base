@@ -1,0 +1,371 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Instalación de PostgreSQL en CentOS 7 &mdash; documentación de Base de conocimientos - 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../../genindex.html"/>
+        <link rel="search" title="Búsqueda" href="../../search.html"/>
+    <link rel="top" title="documentación de Base de conocimientos - 0.1" href="../../index.html"/>
+        <link rel="up" title="CentOS" href="index.html"/>
+        <link rel="next" title="Instalación de Tomcat" href="tomcat-conf.html"/>
+        <link rel="prev" title="Instalación de MySQL en CentOS 7" href="mysql-conf.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Base de conocimientos
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../description.html">Descripción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">Licencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about-developer.html">Sobre el Desarrollador</a></li>
+</ul>
+<p class="caption"><span class="caption-text">JHipster</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../jhipster/index.html">JHipster</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Spring</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../spring/index.html">Spring: documentación en español</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Arquitectura</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../arquitectura/index.html">Arquitectura</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Linux</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Linux</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../principios/index.html">Linux: principios</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">CentOS</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="apache.html">Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coreos.html">CoreOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dockers.html">Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mysql-conf.html">Instalación de MySQL en CentOS 7</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Instalación de PostgreSQL en CentOS 7</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#instalacion-de-paquetes">Instalación de paquetes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inicializacion-de-la-base-de-datos-postgresql">Inicialización de la base de datos PostgreSQL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#habilitacion-del-acceso-por-tcp">Habilitación del acceso por TCP.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iniciando-el-servicio-de-postgresql">Iniciando el servicio de postgresql</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#habilitando-el-servicio-de-postgresql">Habilitando el servicio de postgresql</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configurando-el-firewall-para-postgresql">Configurando el firewall para postgresql</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creando-usuario-para-nuestra-aplicacion">Creando usuario para nuestra aplicación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creacion-de-la-base-de-datos-appdb-para-nuestro-proyecto-sociada-al-usuario-appuser">Creación de la base de datos <code class="docutils literal"><span class="pre">appdb</span></code> para nuestro proyecto, sociada al usuario <code class="docutils literal"><span class="pre">appuser</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#probar-usuario-y-contrasena-opcional">Probar usuario y contraseña (opcional)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tomcat-conf.html">Instalación de Tomcat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vagrant.html">Instalación y configuración de VAGRANT en CENTOS 7</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vagrant.html#instalacion-de-apache-tomcat-7">Instalación de Apache Tomcat 7</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Base de conocimientos</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Linux</a> &raquo;</li>
+        
+          <li><a href="index.html">CentOS</a> &raquo;</li>
+        
+      <li>Instalación de PostgreSQL en CentOS 7</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/linux/centos7/postgresql-install.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <blockquote>
+<div><strong>Autor</strong> : INFOTEC - DADS</div></blockquote>
+<div class="section" id="instalacion-de-postgresql-en-centos-7">
+<span id="instalacion-de-postgresql-en-centos-7"></span><h1>Instalación de PostgreSQL en CentOS 7<a class="headerlink" href="#instalacion-de-postgresql-en-centos-7" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="instalacion-de-paquetes">
+<span id="instalacion-de-paquetes"></span><h2>Instalación de paquetes<a class="headerlink" href="#instalacion-de-paquetes" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo yum -y install postgresql postgresql-server postgresql-contrib
+</pre></div>
+</div>
+</div>
+<div class="section" id="inicializacion-de-la-base-de-datos-postgresql">
+<span id="inicializacion-de-la-base-de-datos-postgresql"></span><h2>Inicialización de la base de datos PostgreSQL<a class="headerlink" href="#inicializacion-de-la-base-de-datos-postgresql" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La primera vez que se va a iniciar PostgreSQL, es necesario iniciar la base de datos</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo postgresql-setup initdb
+</pre></div>
+</div>
+</div>
+<div class="section" id="habilitacion-del-acceso-por-tcp">
+<span id="habilitacion-del-acceso-por-tcp"></span><h2>Habilitación del acceso por TCP.<a class="headerlink" href="#habilitacion-del-acceso-por-tcp" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Modificando configuración de acceso para <code class="docutils literal"><span class="pre">_localhost_</span></code>.</p>
+<div class="section" id="se-modifica-el-archivo-var-lib-pgsql-data-pg-hba-conf">
+<span id="se-modifica-el-archivo-var-lib-pgsql-data-pg-hba-conf"></span><h3>Se modifica el archivo <code class="docutils literal"><span class="pre">/var/lib/pgsql/data/pg_hba.conf</span></code><a class="headerlink" href="#se-modifica-el-archivo-var-lib-pgsql-data-pg-hba-conf" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Se cambian las líneas:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="na">host all all 127.0.0.1/32 ident</span>
+<span class="na">host all all ::1/128      ident</span>
+</pre></div>
+</div>
+<p>por:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="na">host all all 127.0.0.1/32 md5</span>
+<span class="na">host all all ::1/128      md5</span>
+</pre></div>
+</div>
+<blockquote>
+<div>Si se requiere acceder a PostgreSQL desde otra IP, se deberá agregar una línea extra por IP o Rango de IPs.</div></blockquote>
+</div>
+<div class="section" id="se-modifica-el-archivo-var-lib-pgsql-data-postgresql-conf">
+<span id="se-modifica-el-archivo-var-lib-pgsql-data-postgresql-conf"></span><h3>Se modifica el archivo <code class="docutils literal"><span class="pre">/var/lib/pgsql/data/postgresql.conf</span></code><a class="headerlink" href="#se-modifica-el-archivo-var-lib-pgsql-data-postgresql-conf" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Se descomentan las líneas:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="na">listen_addresses</span> <span class="o">=</span> <span class="s">&#39;localhost&#39;</span>
+<span class="na">port</span> <span class="o">=</span> <span class="s">5432</span>
+</pre></div>
+</div>
+<blockquote>
+<div>Si se requiere acceder a PostgreSQL desde otra IP, se deberá cambiar <code class="docutils literal"><span class="pre">'localhost'</span></code>
+por <code class="docutils literal"><span class="pre">'*'</span></code>.</div></blockquote>
+</div>
+</div>
+<div class="section" id="iniciando-el-servicio-de-postgresql">
+<span id="iniciando-el-servicio-de-postgresql"></span><h2>Iniciando el servicio de postgresql<a class="headerlink" href="#iniciando-el-servicio-de-postgresql" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo systemctl start postgresql
+</pre></div>
+</div>
+</div>
+<div class="section" id="habilitando-el-servicio-de-postgresql">
+<span id="habilitando-el-servicio-de-postgresql"></span><h2>Habilitando el servicio de postgresql<a class="headerlink" href="#habilitando-el-servicio-de-postgresql" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo systemctl <span class="nb">enable</span> postgresql
+</pre></div>
+</div>
+</div>
+<div class="section" id="configurando-el-firewall-para-postgresql">
+<span id="configurando-el-firewall-para-postgresql"></span><h2>Configurando el firewall para postgresql<a class="headerlink" href="#configurando-el-firewall-para-postgresql" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Activar el servicio de <strong>firewall-cmd</strong></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo systemctl start firewalld.service
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo firewall-cmd --permanent --zone<span class="o">=</span>public --add-service<span class="o">=</span>postgresql
+</pre></div>
+</div>
+</div>
+<div class="section" id="creando-usuario-para-nuestra-aplicacion">
+<span id="creando-usuario-para-nuestra-aplicacion"></span><h2>Creando usuario para nuestra aplicación<a class="headerlink" href="#creando-usuario-para-nuestra-aplicacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo su - postgres -c <span class="s2">&quot;createuser -DISRP appuser&quot;</span>
+</pre></div>
+</div>
+<blockquote>
+<div>Se dejó como password: <code class="docutils literal"><span class="pre">appuser</span></code></div></blockquote>
+</div>
+<div class="section" id="creacion-de-la-base-de-datos-appdb-para-nuestro-proyecto-sociada-al-usuario-appuser">
+<span id="creacion-de-la-base-de-datos-appdb-para-nuestro-proyecto-sociada-al-usuario-appuser"></span><h2>Creación de la base de datos <code class="docutils literal"><span class="pre">appdb</span></code> para nuestro proyecto, sociada al usuario <code class="docutils literal"><span class="pre">appuser</span></code><a class="headerlink" href="#creacion-de-la-base-de-datos-appdb-para-nuestro-proyecto-sociada-al-usuario-appuser" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo su - postgres -c <span class="s2">&quot;createdb -O appuser appdb&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="probar-usuario-y-contrasena-opcional">
+<span id="probar-usuario-y-contrasena-opcional"></span><h2>Probar usuario y contraseña (opcional)<a class="headerlink" href="#probar-usuario-y-contrasena-opcional" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>psql -h localhost -U appuser -W
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tomcat-conf.html" class="btn btn-neutral float-right" title="Instalación de Tomcat" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mysql-conf.html" class="btn btn-neutral" title="Instalación de MySQL en CentOS 7" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, DADS Infotec.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
