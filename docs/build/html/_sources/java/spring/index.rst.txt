@@ -1,4 +1,4 @@
 .. toctree::
 
   spring-data-jpa-reference
-  spring-data
+  spring-boot-reference

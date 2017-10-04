@@ -1,4 +1,6 @@
-# Spring Data Reference
+# Spring Data JPA - Documentación de referencia
+
+[Documento original](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#dependencies.spring-framework)
 
 ## 3. Dependencias
 
